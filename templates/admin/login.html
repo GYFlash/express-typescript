@@ -8,5 +8,51 @@
 </head>
 <body>
 <h1><%= title %></h1>
+
+<label>
+姓名: <input class="name" type="text" placeholder="姓名">
+</label>
+<label>
+年龄：<input class="age" type="number" placeholder="年龄">
+</label>
+<label>
+签名: <input class="sign" type="text" placeholder="个性签名">
+</label>
+<button onclick="add()">添加用户</button>
+<div class="list">
+</div>
+<script type="text/javascript" src="/plugins/jquery.min.js"></script>
+<script>
+    function add() {
+        var name = $('.name').val();
+        var age = $('.age').val();
+        var sign = $('.sign').val();
+        $.ajax({
+            url: '/api/add-user',
+            data: {
+                name: name,
+                age: age,
+                sign: sign
+            },
+            type: 'post',
+            success: function (res) {
+                if (res.status === 'success') {
+                    console.log(res);
+                    showList(res.result);
+                } else {
+                    alert(res.message);
+                }
+            }
+        })
+    }
+    function showList(users) {
+        var html = '';
+        for (var i = 0; i < users.length; i++) {
+            var user = users[i];
+            html += '<p><span>姓名: '+ user.name +'</span> -- <span>年龄: '+ user.age +'</span> -- <span>签名：'+ user.sign +'</span></p>'
+        }
+        $('.list').html(html);
+    }
+</script>
 </body>
 </html>
