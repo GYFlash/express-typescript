@@ -20,8 +20,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = __importStar(require("express"));
-const index_1 = require("../dbModes/index");
-const User_1 = require("../dbModes/User");
+const index_1 = require("../models/index");
+const User_1 = require("../models/User");
 let router = express.Router();
 router.post('/add-user', (req, res, next) => __awaiter(this, void 0, void 0, function* () {
     let params = req.body;

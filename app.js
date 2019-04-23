@@ -3,17 +3,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var hbs = require('hbs');
+var ejs = require('ejs');
 
-var indexRouter = require('./bundles/routes/index.js');
-var apis = require('./bundles/apis/index');
+var indexRouter = require('./bundles/index.js');
+var adminRouter = require('./bundles/views/adminViews.js');
+var api = require('./bundles/apis/index');
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'templates'));
 app.set('view engine', 'html');
-app.engine('html', hbs.__express);
+app.engine('html', ejs.__express);
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -21,8 +22,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/view', indexRouter);
-app.use('/api', apis);
+app.use('/', indexRouter);
+app.use('/admin', adminRouter);
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

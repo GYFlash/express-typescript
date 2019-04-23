@@ -1,0 +1,13 @@
+.appShow-enter-active {
+    transition: all .5s ease;
+}
+.appShow-leave-active {
+    transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.appShow-enter, .appShow-leave-to {
+    /*transform: translateY(-10px);*/
+    opacity: 0;
+}
+#app {
+    display: none;
+}

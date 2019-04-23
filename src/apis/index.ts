@@ -5,8 +5,8 @@
 
 import * as express from 'express';
 import { IRoute, Router} from "express-serve-static-core";
-import { connection } from "../dbModes/index";
-import { User } from "../dbModes/User";
+import { connection } from "../models/index";
+import { User } from "../models/User";
 
 let router:Router = express.Router();
 router.post('/add-user', async (req, res, next) => {
