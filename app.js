@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var ejs = require('ejs');
+var { Token } = require('./bundles/common/common');
 
 var indexRouter = require('./bundles/index.js');
 var adminRouter = require('./bundles/views/adminViews.js');
@@ -20,8 +21,29 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
+// 自定义中间件
+app.use(async function (req, res, next) {
+  let resType = req.headers.restype;
+  let token = req.headers.token;
+  let result = await Token.check(token);
+  if (result.data || req.originalUrl == '/api/add-user' || req.originalUrl == '/api/login' || (req.originalUrl.indexOf('/admin') != -1)) { next() } else {
+      console.log(resType);
+      if (resType) {
+        res.json(result)
+      } else {
+        res.redirect('/admin/login')
+      }
+  }
+
+  // if (resType) {
+  //     res.json(result);
+  // }
+  // next();
+});
+
+// 路由
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
 app.use('/api', api);

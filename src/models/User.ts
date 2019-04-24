@@ -25,6 +25,18 @@ class User extends BaseEntity {
         charset: 'utf8'
     })
     sign: string | undefined;
+
+    @Column({
+        type: 'text',
+        charset: 'utf8'
+    })
+    password: string | undefined;
+
+    @Column({
+        type: 'text',
+        charset: 'utf8'
+    })
+    token:string | undefined
 }
 
 export { User }

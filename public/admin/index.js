@@ -15,10 +15,31 @@ const app =  new Vue({
     el: '#app',
     data: {
         appShow: false,
-        vueTitle: 'welcome use vue template!'
+        vueTitle: 'welcome use vue template!',
+        users: null
     },
     mounted: function () {
         showApp(this);
+        let _this = this;
+        $.ajax({
+            url: '/api/getUsers',
+            beforeSend: function(request) {
+                request.setRequestHeader("restype","json");
+                request.setRequestHeader("token", window.localStorage.getItem('token'));
+            },
+            type: 'post',
+            success: function (res) {
+                if (res.status === 'success') {
+                    console.log(res);
+                    _this.users = res.result;
+                } else {
+                    alert(res.message);
+                    if (res.message === '登录超时') {
+                        window.location = '/admin/login'
+                    }
+                }
+            }
+        })
     }
 });
 

@@ -10,22 +10,21 @@
 <h1><%= title %></h1>
 
 <label>
-用户名: <input class="user-name" type="text" placeholder="姓名">
+    账号: <input class="user-name" type="text" placeholder="姓名">
 </label>
 <label>
-密码：<input class="password" type="password" placeholder="密码">
+    密码：<input class="password" type="password" placeholder="密码">
 </label>
-
-<button onclick="login()">登录</button>
+<button onclick="add()">添加用户</button>
 <div class="list">
 </div>
 <script type="text/javascript" src="/static/plugins/jquery.min.js"></script>
 <script>
-    function login() {
+    function add() {
         var name = $('.user-name').val();
         var psw = $('.password').val();
         $.ajax({
-            url: '/api/login',
+            url: '/api/add-user',
             beforeSend: function(request) {
                 request.setRequestHeader("restype","json");
             },
@@ -37,8 +36,7 @@
             success: function (res) {
                 if (res.status === 'success') {
                     console.log(res);
-                    window.localStorage.setItem('token', res.result.token)
-                    window.location = '/admin'
+                    window.location = '/admin/login'
                 } else {
                     alert(res.message);
                 }

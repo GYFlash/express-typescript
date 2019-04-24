@@ -38,6 +38,20 @@ __decorate([
     }),
     __metadata("design:type", Object)
 ], User.prototype, "sign", void 0);
+__decorate([
+    typeorm_1.Column({
+        type: 'text',
+        charset: 'utf8'
+    }),
+    __metadata("design:type", Object)
+], User.prototype, "password", void 0);
+__decorate([
+    typeorm_1.Column({
+        type: 'text',
+        charset: 'utf8'
+    }),
+    __metadata("design:type", Object)
+], User.prototype, "token", void 0);
 User = __decorate([
     typeorm_1.Entity()
 ], User);

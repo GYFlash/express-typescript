@@ -5,6 +5,7 @@
 
 import * as express from 'express';
 import { IRoute, Router } from "express-serve-static-core";
+import { Token, TokenResult } from "../common/common";
 
 const router:Router = express.Router();
 
@@ -15,11 +16,16 @@ router.get('/', (req, res, next) => {
     })
 });
 
+// 注册
+router.get('/register', async (req, res, next) => {
+    res.render('admin/register', {
+        title: '注册'
+    })
+});
+
 // 登录
 router.get('/login', (req, res, next) => {
-    res.render('admin/login', {
-        title: 'login admin'
-    })
+    res.render('admin/login', {title: '登录'})
 });
 
 module.exports = router;
