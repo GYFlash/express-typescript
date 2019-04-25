@@ -23,33 +23,24 @@ const express = __importStar(require("express"));
 const UserController_1 = require("../controller/UserController");
 let router = express.Router();
 //// 用户注册
-router.post('/register', (req, res, next) => __awaiter(this, void 0, void 0, function* () {
+router.post('/register', (req, res) => __awaiter(this, void 0, void 0, function* () {
     let params = req.body;
     let userController = new UserController_1.UserController();
     let jsonResponse = yield userController.userRegister(params);
     res.json(jsonResponse);
 }));
 //// 用户登录
-router.post('/login', (req, res, next) => __awaiter(this, void 0, void 0, function* () {
+router.post('/login', (req, res) => __awaiter(this, void 0, void 0, function* () {
     let params = req.body;
     let userController = new UserController_1.UserController();
     let jsonResponse = yield userController.userLogin(params);
     res.json(jsonResponse);
 }));
 //// 用户列表查询
-router.post('/getUsers', (req, res, next) => __awaiter(this, void 0, void 0, function* () {
+router.post('/getUsers', (req, res) => __awaiter(this, void 0, void 0, function* () {
     let userController = new UserController_1.UserController();
     let jsonResponse = yield userController.userGetAll();
     res.json(jsonResponse);
-    // let con = await connection();
-    // let users = await User.find();
-    // con.close();
-    // res.json({
-    //     status: 'success',
-    //     code: '000',
-    //     result: users,
-    //     message: '查询成功'
-    // })
 }));
 module.exports = router;
 //# sourceMappingURL=index.js.map

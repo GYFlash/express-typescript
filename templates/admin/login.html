@@ -2,24 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title><%= title %></title>
     <link rel="shortcut icon" href="/static/images/icons/favicon.ico"/>
     <link rel="bookmark" href="/static/images/icons/favicon.ico"/>
+    <link rel="stylesheet" href="/static/plugins/layui/css/layui.css">
+    <style>
+        .login-container {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            background: url("/static/images/pictrue/bg_login_container.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        .login-container .content {
+            margin-top: 15%;
+            width: 300px;
+            padding: 20px 20px 20px 10px;
+            /*border: 1px solid gainsboro;*/
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, .5);
+        }
+        .layui-input-block {
+            margin-left: 80px;
+        }
+        .layui-form-label {
+            width: auto;
+            /*color: #ffffff;*/
+        }
+    </style>
 </head>
 <body>
-<h1><%= title %></h1>
 
-<label>
-用户名: <input class="account" type="text" placeholder="姓名">
-</label>
-<label>
-密码：<input class="password" type="password" placeholder="密码">
-</label>
+<!--<label>-->
+<!--用户名: <input class="account" type="text" placeholder="姓名">-->
+<!--</label>-->
+<!--<label>-->
+<!--密码：<input class="password" type="password" placeholder="密码">-->
+<!--</label>-->
 
-<button onclick="login()">登录</button>
-<div class="list">
+<!--<button onclick="login()">登录</button>-->
+
+<div class="login-container ">
+
+    <form class="content layui-form">
+        <div style="height: 60px;color: white;text-align: center;">
+            <h2><%= title%></h2>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">账号：</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input account" placeholder="账号">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">密码：</label>
+            <div class="layui-input-block">
+                <input type="password" class="layui-input password" placeholder="密码">
+            </div>
+        </div>
+        <div class="layui-btn-group" style="display: block;text-align: center;height: 100px;padding-top: 20px;">
+            <div class="layui-btn layui-btn-normal" onclick="login()">立即登录</div>
+            <div class="layui-btn layui-btn-primary" onclick="window.location = '/admin/register'">注册</div>
+        </div>
+    </form>
 </div>
+
 <script type="text/javascript" src="/static/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
 <script>
     function login() {
         var account = $('.account').val();

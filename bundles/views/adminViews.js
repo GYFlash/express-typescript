@@ -21,20 +21,20 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = __importStar(require("express"));
 const router = express.Router();
-// 首页
-router.get('/', (req, res, next) => {
+//// 首页
+router.get('/', (req, res) => {
     res.render('admin/index', {
         title: 'Welcome to express admin'
     });
 });
-// 注册
-router.get('/register', (req, res, next) => __awaiter(this, void 0, void 0, function* () {
+//// 注册
+router.get('/register', (req, res) => __awaiter(this, void 0, void 0, function* () {
     res.render('admin/register', {
         title: '注册'
     });
 }));
-// 登录
-router.get('/login', (req, res, next) => {
+//// 登录
+router.get('/login', (req, res) => {
     res.render('admin/login', { title: '登录' });
 });
 module.exports = router;

@@ -26,7 +26,7 @@ class UserController extends BaseController_1.BaseController {
     userRegister(params) {
         return __awaiter(this, void 0, void 0, function* () {
             let _this = this;
-            return yield new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+            return yield new Promise((resolve) => __awaiter(this, void 0, void 0, function* () {
                 if (params.account && params.password) {
                     // 链接数据库
                     let con = yield _this._connectionOpen();
@@ -79,7 +79,7 @@ class UserController extends BaseController_1.BaseController {
     userLogin(params) {
         return __awaiter(this, void 0, void 0, function* () {
             let _this = this;
-            return yield new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+            return yield new Promise((resolve) => __awaiter(this, void 0, void 0, function* () {
                 if (params.account && params.password) {
                     // 链接数据库
                     let con = yield _this._connectionOpen();
@@ -135,7 +135,7 @@ class UserController extends BaseController_1.BaseController {
     userGetAll(params) {
         return __awaiter(this, void 0, void 0, function* () {
             let _this = this;
-            return yield new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
+            return yield new Promise((resolve) => __awaiter(this, void 0, void 0, function* () {
                 // 链接数据库
                 let con = yield _this._connectionOpen();
                 if (!con) {

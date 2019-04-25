@@ -17,7 +17,7 @@ const typeorm_1 = require("typeorm");
 const User_1 = require("./User");
 let connection = function () {
     return __awaiter(this, void 0, void 0, function* () {
-        return yield new Promise((resolve, reject) => {
+        return yield new Promise((resolve) => {
             typeorm_1.createConnection({
                 type: "mysql",
                 host: "localhost",
