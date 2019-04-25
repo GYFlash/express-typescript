@@ -6,9 +6,9 @@ var logger = require('morgan');
 var ejs = require('ejs');
 var tokenMiddleware = require('./bundles/common/TokenMiddleware');
 
-var indexRouter = require('./bundles/index.js');
-var adminRouter = require('./bundles/views/adminViews.js');
-var api = require('./bundles/apis/index');
+var indexRouter = require('./bundles/index');
+var adminRouter = require('./bundles/views/AdminViews');
+var api = require('./bundles/apis/Index');
 
 var app = express();
 

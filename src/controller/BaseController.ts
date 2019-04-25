@@ -4,7 +4,7 @@
 // createTime: 2019/4/25
 
 import { Connection } from "typeorm";
-import { connection } from "../models";
+import { connection } from "../models/Connection";
 import { JsonResponse } from "../common/common";
 
 export class BaseController {

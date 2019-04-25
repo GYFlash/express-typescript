@@ -1,11 +1,10 @@
-// FileName: adminViews.ts
+// FileName: AdminViews.ts
 // ProjectName: express-typescript
 // 作者：区区电脑
 // createTime: 2019/4/23
 
 import * as express from 'express';
-import { IRoute, Router } from "express-serve-static-core";
-import { Token, TokenResult } from "../common/common";
+import { Router } from "express-serve-static-core";
 
 const router:Router = express.Router();
 
