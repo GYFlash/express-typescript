@@ -22,6 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use('/templatesJs', express.static(path.join(__dirname, 'templatesJs')));
 
 // 自定义中间件
 app.use(tokenMiddleware);
