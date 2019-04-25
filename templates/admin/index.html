@@ -39,7 +39,7 @@
                                 <dd><a href="">安全设置</a></dd>
                             </dl>
                         </li>
-                        <li class="layui-nav-item"><a href="">退了</a></li>
+                        <li class="layui-nav-item" @click="logout"><a>退了</a></li>
                     </ul>
                 </div>
 
@@ -73,7 +73,7 @@
                 <div class="layui-body">
                     <!-- 内容主体区域 -->
                     <h1 style="padding: 15px;">{{ vueTitle }}</h1>
-                    <div v-for="(item, index) in users" :key="index">{{ item.id }}- {{ item.name }}</div>
+                    <div v-for="(item, index) in users" :key="index">{{ item.id }}- {{ item.account }}</div>
                 </div>
 
                 <div class="layui-footer">

@@ -10,7 +10,7 @@
 <h1><%= title %></h1>
 
 <label>
-    账号: <input class="user-name" type="text" placeholder="姓名">
+    账号: <input class="account" type="text" placeholder="姓名">
 </label>
 <label>
     密码：<input class="password" type="password" placeholder="密码">
@@ -21,15 +21,15 @@
 <script type="text/javascript" src="/static/plugins/jquery.min.js"></script>
 <script>
     function add() {
-        var name = $('.user-name').val();
+        var account = $('.account').val();
         var psw = $('.password').val();
         $.ajax({
-            url: '/api/add-user',
+            url: '/api/register',
             beforeSend: function(request) {
                 request.setRequestHeader("restype","json");
             },
             data: {
-                userName: name,
+                account: account,
                 password: psw,
             },
             type: 'post',
@@ -42,14 +42,6 @@
                 }
             }
         })
-    }
-    function showList(users) {
-        var html = '';
-        for (var i = 0; i < users.length; i++) {
-            var user = users[i];
-            html += '<p><span>姓名: '+ user.name +'</span> -- <span>年龄: '+ user.age +'</span> -- <span>签名：'+ user.sign +'</span></p>'
-        }
-        $('.list').html(html);
     }
 </script>
 </body>

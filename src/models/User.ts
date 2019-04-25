@@ -15,7 +15,7 @@ class User extends BaseEntity {
         type: 'text',
         charset: 'utf8'
     })
-    name: string | undefined;
+    account: string | undefined;
 
     @Column('int')
     age: number | undefined;

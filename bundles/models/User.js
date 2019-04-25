@@ -26,7 +26,7 @@ __decorate([
         charset: 'utf8'
     }),
     __metadata("design:type", Object)
-], User.prototype, "name", void 0);
+], User.prototype, "account", void 0);
 __decorate([
     typeorm_1.Column('int'),
     __metadata("design:type", Object)

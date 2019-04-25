@@ -4,11 +4,11 @@
 // createTime: 2019/4/22
 
 import 'reflect-metadata';
-import { createConnection } from "typeorm";
+import {Connection, createConnection} from "typeorm";
 import { User } from './User';
 
-let connection:any = function () {
-    return new Promise((resolve, reject) => {
+let connection:any = async function () {
+    return await new Promise<Connection>((resolve) => {
         createConnection({
             type: "mysql",
             host: "localhost",
@@ -25,7 +25,7 @@ let connection:any = function () {
             resolve(connection);
         }).catch( error => {
             console.error(error);
-            reject(false);
+            resolve();
         })
     })
 };

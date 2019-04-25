@@ -25,21 +25,27 @@ const app =  new Vue({
             url: '/api/getUsers',
             beforeSend: function(request) {
                 request.setRequestHeader("restype","json");
-                request.setRequestHeader("token", window.localStorage.getItem('token'));
+                request.setRequestHeader("token", window.localStorage.getItem('token') + '');
             },
             type: 'post',
             success: function (res) {
                 if (res.status === 'success') {
                     console.log(res);
-                    _this.users = res.result;
+                    _this.users = res.data;
                 } else {
                     alert(res.message);
-                    if (res.message === '登录超时') {
+                    if (res.message === '登录超时' || res.message === '未登录') {
                         window.location = '/admin/login'
                     }
                 }
             }
         })
+    },
+    methods: {
+        logout: function () {
+            window.localStorage.clear('token');
+            window.location = '/admin/login'
+        }
     }
 });
 

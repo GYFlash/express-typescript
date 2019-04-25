@@ -9,22 +9,22 @@ import { Token, TokenResult } from "../common/common";
 
 const router:Router = express.Router();
 
-// 首页
-router.get('/', (req, res, next) => {
+//// 首页
+router.get('/', (req, res) => {
     res.render('admin/index', {
         title: 'Welcome to express admin'
     })
 });
 
-// 注册
-router.get('/register', async (req, res, next) => {
+//// 注册
+router.get('/register', async (req, res) => {
     res.render('admin/register', {
         title: '注册'
     })
 });
 
-// 登录
-router.get('/login', (req, res, next) => {
+//// 登录
+router.get('/login', (req, res) => {
     res.render('admin/login', {title: '登录'})
 });
 
