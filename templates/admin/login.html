@@ -68,9 +68,11 @@
                 <input type="password" class="layui-input password" placeholder="密码">
             </div>
         </div>
-        <div class="layui-btn-group" style="display: block;text-align: center;height: 100px;padding-top: 20px;">
-            <div class="layui-btn layui-btn-normal" onclick="login()">立即登录</div>
-            <div class="layui-btn layui-btn-primary" onclick="window.location = '/admin/register'">注册</div>
+        <div class="layui-btn-group" style="display: block;height: 100px;padding-top: 20px;">
+            <div class="layui-input-block">
+                <div class="layui-btn layui-btn-normal" onclick="login()">立即登录</div>
+                <div class="layui-btn layui-btn-primary" onclick="window.location = '/admin/register'">注册</div>
+            </div>
         </div>
     </form>
 </div>
@@ -78,6 +80,10 @@
 <script type="text/javascript" src="/static/plugins/jquery.min.js"></script>
 <script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
 <script>
+    var layer;
+    layui.use('layer', function () {
+        layer = layui.layer;
+    });
     function login() {
         var account = $('.account').val();
         var psw = $('.password').val();
@@ -97,7 +103,7 @@
                     window.localStorage.setItem('token', res.data.token)
                     window.location = '/admin'
                 } else {
-                    alert(res.message);
+                    layer.msg(res.message);
                 }
             }
         })

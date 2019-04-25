@@ -2,18 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="158e4214-e39b-4ef8-b3b9-aef359cedda9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bundles/apis/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/apis/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bundles/apis/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/apis/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bundles/controller/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/controller/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bundles/controller/UserController.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/controller/UserController.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bundles/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/models/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bundles/models/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/models/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bundles/views/adminViews.js" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/views/adminViews.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bundles/views/adminViews.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/views/adminViews.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/layui/lay/modules/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/layui/lay/modules/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/layui/layui.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/layui/layui.all.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/vue.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/vue.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/register.html" afterDir="false" />
     </list>
@@ -169,14 +157,14 @@
         <counts>
           <entry key="gitattributes" value="35" />
           <entry key="gitignore" value="7" />
-          <entry key="html" value="1271" />
+          <entry key="html" value="1436" />
           <entry key="js" value="1086" />
           <entry key="ts" value="35563" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1271" />
+          <entry key="HTML" value="1436" />
           <entry key="JavaScript" value="1086" />
           <entry key="PLAIN_TEXT" value="42" />
           <entry key="TypeScript" value="35563" />
@@ -191,14 +179,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/admin/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="71" column="72" selection-start-line="71" selection-start-column="72" selection-end-line="71" selection-end-column="72" />
+            <state relative-caret-position="368">
+              <caret line="70" column="59" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -208,16 +195,16 @@
         <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="433">
-              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" selection-end-column="77" />
+              <caret line="88" selection-start-line="88" selection-end-line="88" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="72" column="98" selection-start-line="72" selection-start-column="98" selection-end-line="72" selection-end-column="98" />
+            <state relative-caret-position="421">
+              <caret line="109" column="23" lean-forward="true" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -302,8 +289,8 @@
         <option value="$PROJECT_DIR$/src/models/index.ts" />
         <option value="$PROJECT_DIR$/src/views/adminViews.ts" />
         <option value="$PROJECT_DIR$/.gitattributes" />
-        <option value="$PROJECT_DIR$/templates/admin/register.html" />
         <option value="$PROJECT_DIR$/templates/admin/login.html" />
+        <option value="$PROJECT_DIR$/templates/admin/register.html" />
       </list>
     </option>
   </component>
@@ -468,12 +455,12 @@
       <workItem from="1556012437925" duration="1513000" />
       <workItem from="1556067869426" duration="17761000" />
       <workItem from="1556089796607" duration="10395000" />
-      <workItem from="1556154404919" duration="22723000" />
+      <workItem from="1556154404919" duration="23401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81564000" />
+    <option name="totallyTimeSpent" value="82242000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -503,7 +490,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32819384" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.2400881" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2400881" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -800,25 +787,24 @@
     <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="72" column="98" selection-start-line="72" selection-start-column="98" selection-end-line="72" selection-end-column="98" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="88" selection-start-line="88" selection-end-line="88" selection-end-column="77" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="71" column="72" selection-start-line="71" selection-start-column="72" selection-end-line="71" selection-end-column="72" />
+        <state relative-caret-position="368">
+          <caret line="70" column="59" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="109" column="23" lean-forward="true" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
           <folding>
             <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

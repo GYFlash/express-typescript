@@ -68,15 +68,21 @@
                 <input type="password" class="layui-input password" placeholder="密码">
             </div>
         </div>
-        <div class="layui-btn-group" style="display: block;text-align: center;height: 100px;padding-top: 20px;">
-            <div class="layui-btn layui-btn-normal" onclick="add()">立即注册</div>
-            <!--<div class="layui-btn layui-btn-primary" onclick="window.location = '/admin/login'">登录</div>-->
+        <div class="layui-btn-group" style="display: block;height: 100px;padding-top: 20px;">
+            <div class="layui-input-block">
+                <div class="layui-btn layui-btn-normal" onclick="add()">立即注册</div>
+                <!--<div class="layui-btn layui-btn-primary" onclick="window.location = '/admin/login'">登录</div>-->
+            </div>
         </div>
     </form>
 </div>
 <script type="text/javascript" src="/static/plugins/jquery.min.js"></script>
 <script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
 <script>
+    var layer;
+    layui.use('layer', function () {
+        layer = layui.layer;
+    });
     function add() {
         var account = $('.account').val();
         var psw = $('.password').val();
@@ -93,9 +99,18 @@
             success: function (res) {
                 if (res.status === 'success') {
                     console.log(res);
-                    window.location = '/admin/login'
+                    layer.open({
+                        type: 0,
+                        title: '注册成功',
+                        content: '恭喜您注册成功',
+                        btn: ['立即登录'],
+                        yes: function () {
+                            window.location = '/admin/login'
+                        }
+                    });
+
                 } else {
-                    alert(res.message);
+                    layer.msg(res.message);
                 }
             }
         })
