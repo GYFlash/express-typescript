@@ -24,6 +24,27 @@
 <!--<div class="list">-->
 <!--</div>-->
 <script>
+    load()
+
+    async function load () {
+        console.log(await loadGet())
+    }
+
+     function loadGet () {
+        return get()
+     }
+
+    function get() {
+       return show()
+    }
+
+    function show() {
+        return new Promise((resolve, reject) => {
+            setTimeout(function () {
+                resolve(888)
+            }, 5000)
+        })
+    }
     function add() {
         var name = $('.name').val();
         var age = $('.age').val();
