@@ -1,3 +1,4 @@
+/* 页面显示效果 */
 .appShow-enter-active {
     transition: all .5s ease;
 }
@@ -5,9 +6,27 @@
     transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 .appShow-enter, .appShow-leave-to {
-    /*transform: translateY(-10px);*/
     opacity: 0;
 }
+
 #app {
     display: none;
+}
+
+/* 侧边导航显示效果 */
+.showLeftNavBar-enter-active {
+    transition: all .5s ease;
+}
+.showLeftNavBar-leave-active {
+    transition: all .5s;
+}
+.showLeftNavBar-enter, .showLeftNavBar-leave-to {
+    transform: translateX(-200px);
+    opacity: 0;
+}
+
+
+/* 显示小手鼠标 */
+.can-tap {
+    cursor: pointer;
 }
