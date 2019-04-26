@@ -4,29 +4,35 @@
 // createTime: 2019/4/22
 
 import 'reflect-metadata';
-import {Connection, createConnection} from "typeorm";
-import { User } from './User';
+import {
+    Connection,
+    createConnection,
+    getConnection,
+} from "typeorm";
 
 let connection:any = async function () {
-    return await new Promise<Connection>((resolve) => {
-        createConnection({
-            type: "mysql",
-            host: "localhost",
-            port: 3306,
-            username: "root",
-            password: "root",
-            database: "test",
-            charset: "utf8",
-            entities: [
-                User
-            ],
-            synchronize: true
-        }).then(connection => {
+    return await new Promise<Connection>(async (resolve) => {
+        try {
+           let connect = getConnection();
+           resolve(connect);
+        } catch (e) {
+            const connection = await createConnection({
+                    type: "mysql",
+                    host: "localhost",
+                    port: 3306,
+                    username: "root",
+                    password: "root",
+                    entityPrefix: 'express',
+                    database: 'test',
+                    charset: "utf8",
+                    entities: [__dirname + '/*{.js,.ts}'],
+                    extra: {
+                        connectionLimit:  10, // 连接池最大连接数量, 查阅资料 建议是  core number  * 2 + n
+                    },
+                    synchronize: true
+                });
             resolve(connection);
-        }).catch( error => {
-            console.error(error);
-            resolve();
-        })
+        }
     })
 };
 

@@ -43,4 +43,4 @@ router.post('/getUsers', (req, res) => __awaiter(this, void 0, void 0, function*
     res.json(jsonResponse);
 }));
 module.exports = router;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=Index.js.map

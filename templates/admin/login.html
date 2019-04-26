@@ -35,20 +35,10 @@
         }
         .layui-form-label {
             width: auto;
-            /*color: #ffffff;*/
         }
     </style>
 </head>
 <body>
-
-<!--<label>-->
-<!--用户名: <input class="account" type="text" placeholder="姓名">-->
-<!--</label>-->
-<!--<label>-->
-<!--密码：<input class="password" type="password" placeholder="密码">-->
-<!--</label>-->
-
-<!--<button onclick="login()">登录</button>-->
 
 <div class="login-container ">
 
@@ -68,11 +58,9 @@
                 <input type="password" class="layui-input password" placeholder="密码">
             </div>
         </div>
-        <div class="layui-btn-group" style="display: block;height: 100px;padding-top: 20px;">
-            <div class="layui-input-block">
-                <div class="layui-btn layui-btn-normal" onclick="login()">立即登录</div>
-                <div class="layui-btn layui-btn-primary" onclick="window.location = '/admin/register'">注册</div>
-            </div>
+        <div class="layui-form-item layui-input-block layui-btn-group">
+            <div class="layui-btn layui-btn-normal" onclick="login()">立即登录</div>
+            <div class="layui-btn layui-btn-primary" onclick="window.location = '/admin/register'">注册</div>
         </div>
     </form>
 </div>

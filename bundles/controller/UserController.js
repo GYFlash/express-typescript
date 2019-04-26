@@ -41,7 +41,6 @@ class UserController extends BaseController_1.BaseController {
                     if (user) {
                         _this.jsonResponse = new common_1.JsonResponseError();
                         _this.jsonResponse.message = '用户已存在';
-                        con.close();
                         resolve(_this.jsonResponse);
                     }
                     else {
@@ -54,12 +53,10 @@ class UserController extends BaseController_1.BaseController {
                             _this.jsonResponse = new common_1.JsonResponseSuccess();
                             _this.jsonResponse.message = '注册成功';
                             _this.jsonResponse.data = u;
-                            con.close();
                             resolve(_this.jsonResponse);
                         })).catch(() => {
                             _this.jsonResponse = new common_1.JsonResponseError();
                             _this.jsonResponse.message = '注册失败';
-                            con.close();
                             resolve(_this.jsonResponse);
                         });
                     }
@@ -94,7 +91,6 @@ class UserController extends BaseController_1.BaseController {
                     if (!user) {
                         _this.jsonResponse = new common_1.JsonResponseError();
                         _this.jsonResponse.message = '用户不存在';
-                        con.close();
                         resolve(_this.jsonResponse);
                     }
                     else {
@@ -102,7 +98,6 @@ class UserController extends BaseController_1.BaseController {
                         if (user.password !== common_1.Md5(params.password)) {
                             _this.jsonResponse = new common_1.JsonResponseError();
                             _this.jsonResponse.message = '密码错误';
-                            con.close();
                             resolve(_this.jsonResponse);
                         }
                         else {
@@ -115,7 +110,6 @@ class UserController extends BaseController_1.BaseController {
                             _this.jsonResponse = new common_1.JsonResponseSuccess();
                             _this.jsonResponse.data = user;
                             _this.jsonResponse.message = '登录成功';
-                            con.close();
                             resolve(_this.jsonResponse);
                         }
                     }
@@ -149,7 +143,6 @@ class UserController extends BaseController_1.BaseController {
                 _this.jsonResponse = new common_1.JsonResponseSuccess();
                 _this.jsonResponse.message = '查询成功';
                 _this.jsonResponse.data = users;
-                con.close();
                 resolve(_this.jsonResponse);
             }));
         });

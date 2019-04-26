@@ -38,4 +38,4 @@ router.get('/login', (req, res) => {
     res.render('admin/login', { title: '登录' });
 });
 module.exports = router;
-//# sourceMappingURL=adminViews.js.map
+//# sourceMappingURL=AdminViews.js.map
