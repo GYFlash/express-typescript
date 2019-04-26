@@ -10,6 +10,7 @@ import {
     getConnection,
 } from "typeorm";
 
+///// 开启默认链接
 let connection:any = async function () {
     return new Promise<Connection>(async (resolve) => {
         try {
