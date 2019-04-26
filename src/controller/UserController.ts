@@ -97,7 +97,7 @@ export class UserController extends BaseController{
                     } else {
 
                         // 登录成功
-                        let token = Token.create({
+                        let token:string = Token.create({
                             account: user.account,
                             id: user.id
                         });
