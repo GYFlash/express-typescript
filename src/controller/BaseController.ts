@@ -17,14 +17,7 @@ export class BaseController {
      * 开启数据库连接
      * @private
      */
-    protected async _connectionOpen() {
-        return await new Promise<Connection>(async (resolve) => {
-            let con:Connection = await connection();
-            if (con) {
-                resolve(con);
-            } else {
-                resolve();
-            }
-        });
+    protected async _connectionOpen():Promise<Connection> {
+        return connection();
     }
 }

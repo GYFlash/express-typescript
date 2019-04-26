@@ -128,23 +128,19 @@ class UserController extends BaseController_1.BaseController {
      */
     userGetAll(params) {
         return __awaiter(this, void 0, void 0, function* () {
-            let _this = this;
-            return yield new Promise((resolve) => __awaiter(this, void 0, void 0, function* () {
-                // 链接数据库
-                let con = yield _this._connectionOpen();
-                if (!con) {
-                    _this.jsonResponse = new common_1.JsonResponseError();
-                    _this.jsonResponse.message = '数据库连接失败';
-                    resolve(_this.jsonResponse);
-                    return;
-                }
-                // 查询用户
-                let users = yield User_1.User.find();
-                _this.jsonResponse = new common_1.JsonResponseSuccess();
-                _this.jsonResponse.message = '查询成功';
-                _this.jsonResponse.data = users;
-                resolve(_this.jsonResponse);
-            }));
+            // 链接数据库
+            let con = yield this._connectionOpen();
+            if (!con) {
+                this.jsonResponse = new common_1.JsonResponseError();
+                this.jsonResponse.message = '数据库连接失败';
+                return this.jsonResponse;
+            }
+            // 查询用户
+            let users = yield User_1.User.find();
+            this.jsonResponse = new common_1.JsonResponseSuccess();
+            this.jsonResponse.message = '查询成功';
+            this.jsonResponse.data = users;
+            return this.jsonResponse;
         });
     }
 }

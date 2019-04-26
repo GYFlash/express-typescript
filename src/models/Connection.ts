@@ -11,7 +11,7 @@ import {
 } from "typeorm";
 
 let connection:any = async function () {
-    return await new Promise<Connection>(async (resolve) => {
+    return new Promise<Connection>(async (resolve) => {
         try {
            let connect = getConnection();
            resolve(connect);

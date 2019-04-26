@@ -121,22 +121,18 @@ export class UserController extends BaseController{
      * @param params
      */
     public async userGetAll(params?:any) {
-        let _this = this;
-        return await new Promise<JsonResponse>(async (resolve) => {
-            // 链接数据库
-            let con:Connection = await _this._connectionOpen();
-            if (!con) {
-                _this.jsonResponse = new JsonResponseError();
-                _this.jsonResponse.message = '数据库连接失败';
-                resolve(_this.jsonResponse);
-                return
-            }
-            // 查询用户
-            let users = await User.find();
-            _this.jsonResponse = new JsonResponseSuccess();
-            _this.jsonResponse.message = '查询成功';
-            _this.jsonResponse.data = users;
-            resolve(_this.jsonResponse)
-        });
+        // 链接数据库
+        let con:Connection = await this._connectionOpen();
+        if (!con) {
+            this.jsonResponse = new JsonResponseError();
+            this.jsonResponse.message = '数据库连接失败';
+            return this.jsonResponse;
+        }
+        // 查询用户
+        let users = await User.find();
+        this.jsonResponse = new JsonResponseSuccess();
+        this.jsonResponse.message = '查询成功';
+        this.jsonResponse.data = users;
+        return this.jsonResponse;
     }
 }
