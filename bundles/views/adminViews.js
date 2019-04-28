@@ -37,5 +37,9 @@ router.get('/register', (req, res) => __awaiter(this, void 0, void 0, function* 
 router.get('/login', (req, res) => {
     res.render('admin/login', { title: '登录' });
 });
+//// 设置侧边导航栏列表
+router.get('/setting/nav-list', (req, res) => {
+    res.render('admin/setting/nav-list', { title: '设置侧边导航栏' });
+});
 module.exports = router;
 //# sourceMappingURL=AdminViews.js.map

@@ -23,7 +23,7 @@ let connection:any = async function () {
                     port: 3306,
                     username: "root",
                     password: "root",
-                    entityPrefix: 'express',
+                    entityPrefix: 'express_',
                     database: 'test',
                     charset: "utf8",
                     entities: [__dirname + '/*{.js,.ts}'],

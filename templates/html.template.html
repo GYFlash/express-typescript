@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title><%= title %></title>
-  <link rel="shortcut icon" href="/images/icons/favicon.ico"/>
-  <link rel="bookmark" href="/images/icons/favicon.ico"/>
-  <link rel="stylesheet" href="/plugins/layui/css/layui.css">
-  <link rel="stylesheet" href="/admin/css/style.css">
+  <link rel="shortcut icon" href="/static/images/icons/favicon.ico"/>
+  <link rel="bookmark" href="/static/images/icons/favicon.ico"/>
+  <link rel="stylesheet" href="/static/plugins/layui/css/layui.css">
+  <link rel="stylesheet" href="/templatesJs/admin/css/style.css">
 </head>
 <body class="layui-layout-body">
 <div id="app">
   <transition name="appShow">
     <div v-show="appShow" class="layui-layout">
+      <h1>{{ vueTitle }}</h1>
     </div>
   </transition>
 </div>
 </body>
-<script type="text/javascript" src="/plugins/vue.min.js"></script>
-<script type="text/javascript" src="/plugins/layui/layui.js"></script>
-<script type="text/javascript" src="/admin/index.js"></script>
+<script type="text/javascript" src="/static/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/static/plugins/vue.min.js"></script>
+<script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
+<script type="text/javascript" src="/templatesJs/admin/index.js"></script>
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title><%= title%></title>
+    <link rel="shortcut icon" href="/static/images/icons/favicon.ico"/>
+    <link rel="bookmark" href="/static/images/icons/favicon.ico"/>
+    <link rel="stylesheet" href="/static/plugins/layui/css/layui.css">
+    <link rel="stylesheet" href="/templatesJs/admin/css/style.css">
+    <style>
+        .layui-form-label {
+            width: 60px;
+        }
+    </style>
+</head>
+<body class="layui-layout-body">
+<div id="app">
+    <transition name="appShow">
+        <div v-show="appShow" class="layui-layout">
+            <form class="layui-form" action="" style="padding: 10px;">
+                <br>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><h3>父导航</h3></label>
+                    <div class="layui-input-inline">
+                        <div class="layui-btn layui-btn-normal">编辑</div>
+                        <div class="layui-btn layui-btn-green" @click="addPre">添加</div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">导航分组</label>
+                    <div class="layui-input-inline">
+                        <select lay-filter="navItem" v-model="activeIndex" lay-verify="required">
+                            <option value=""></option>
+                            <option v-for="(item, index) in navItems" :key="`item_${index}`" :value="index" :class="index">{{ item.title }}</option>
+                        </select>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><h3>子导航</h3></label>
+                    <div class="layui-input-inline">
+                        <!--<div class="layui-btn layui-btn-normal">编辑</div>-->
+                        <div class="layui-btn layui-btn-green" @click="addSub">添加</div>
+                    </div>
+                </div>
+                <div v-for="(itemPre, indexContent) in navItems" :key="indexContent" v-if="indexContent == activeIndex">{{ itemPre.title }}
+                    <div v-for="(item, index) in itemPre.suvNavItems" :key="`subItem_${index}`" lay-filter="subNavs" class="layui-form-item" style="padding-bottom: 20px;">
+                        <label class="layui-form-label">标题</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" v-model="item.title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                        </div>
+                        <label class="layui-form-label">路由</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="router" v-model="item.routerPath" required lay-verify="required" placeholder="请输入路由" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="setNav">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </transition>
+</div>
+</body>
+<script type="text/javascript" src="/static/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/static/plugins/vue.min.js"></script>
+<script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
+<script type="text/javascript" src="/templatesJs/admin/setting/nav-list.js"></script>
+</html>

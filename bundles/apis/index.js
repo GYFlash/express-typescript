@@ -21,6 +21,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = __importStar(require("express"));
 const UserController_1 = require("../controller/UserController");
+const SettingController_1 = require("../controller/SettingController");
 let router = express.Router();
 //// 用户注册
 router.post('/register', (req, res) => __awaiter(this, void 0, void 0, function* () {
@@ -40,6 +41,19 @@ router.post('/login', (req, res) => __awaiter(this, void 0, void 0, function* ()
 router.post('/getUsers', (req, res) => __awaiter(this, void 0, void 0, function* () {
     let userController = new UserController_1.UserController();
     let jsonResponse = yield userController.userGetAll();
+    res.json(jsonResponse);
+}));
+//// 设置侧边栏导航
+router.post('/setting/nav-list', (req, res) => __awaiter(this, void 0, void 0, function* () {
+    let params = req.body;
+    let settingController = new SettingController_1.SettingController();
+    let jsonResponse = yield settingController.settingNavigation(params);
+    res.json(jsonResponse);
+}));
+//// 获取侧边栏导航
+router.get('/get-nav', (req, res) => __awaiter(this, void 0, void 0, function* () {
+    let settingController = new SettingController_1.SettingController();
+    let jsonResponse = yield settingController.getNavigation();
     res.json(jsonResponse);
 }));
 module.exports = router;
