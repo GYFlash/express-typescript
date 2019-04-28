@@ -2,13 +2,6 @@
 // ProjectName: express-typescript
 // 作者: 区区电脑
 // CreateTime: 2019/4/23
-(function () {
-    // 使用layui
-    layui.use('element', function(){
-        var element = layui.element;
-    });
-
-})();
 
 const app =  new Vue({
     el: '#app',

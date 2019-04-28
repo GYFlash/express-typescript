@@ -44,14 +44,14 @@ router.post('/getUsers', (req, res) => __awaiter(this, void 0, void 0, function*
     res.json(jsonResponse);
 }));
 //// 设置侧边栏导航
-router.post('/setting/nav-list', (req, res) => __awaiter(this, void 0, void 0, function* () {
+router.post('/set-menu', (req, res) => __awaiter(this, void 0, void 0, function* () {
     let params = req.body;
     let settingController = new SettingController_1.SettingController();
     let jsonResponse = yield settingController.settingNavigation(params);
     res.json(jsonResponse);
 }));
 //// 获取侧边栏导航
-router.get('/get-nav', (req, res) => __awaiter(this, void 0, void 0, function* () {
+router.get('/get-menu', (req, res) => __awaiter(this, void 0, void 0, function* () {
     let settingController = new SettingController_1.SettingController();
     let jsonResponse = yield settingController.getNavigation();
     res.json(jsonResponse);

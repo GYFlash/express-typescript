@@ -28,8 +28,8 @@ router.get('/login', (req, res) => {
 });
 
 //// 设置侧边导航栏列表
-router.get('/setting/nav-list', (req, res) =>{
-    res.render('admin/setting/nav-list', { title: '设置侧边导航栏' })
+router.get('/set-menu', (req, res) =>{
+    res.render('admin/setting/menu', { title: '设置侧边导航栏' })
 });
 
 module.exports = router;

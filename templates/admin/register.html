@@ -6,7 +6,7 @@
     <title><%= title %></title>
     <link rel="shortcut icon" href="/static/images/icons/favicon.ico"/>
     <link rel="bookmark" href="/static/images/icons/favicon.ico"/>
-    <link rel="stylesheet" href="/static/plugins/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/plugins/zui/css/zui.css">
     <style>
         .login-container {
             position: fixed;
@@ -24,95 +24,68 @@
         .login-container .content {
             margin-top: 15%;
             width: 300px;
-            padding: 20px 20px 20px 10px;
-            /*border: 1px solid gainsboro;*/
+            padding: 20px 40px 40px 40px;
             box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
             border-radius: 5px;
-            background-color: rgba(255, 255, 255, .5);
-        }
-        .layui-input-block {
-            margin-left: 80px;
-        }
-        .layui-form-label {
-            width: auto;
-            /*color: #ffffff;*/
+            background-color: rgba(255, 255, 255, .8);
         }
     </style>
 </head>
 <body>
-<h1><%= title %></h1>
 
-<!--<label>-->
-    <!--账号: <input class="account" type="text" placeholder="姓名">-->
-<!--</label>-->
-<!--<label>-->
-    <!--密码：<input class="password" type="password" placeholder="密码">-->
-<!--</label>-->
-<!--<button onclick="add()">添加用户</button>-->
-<!--<div class="list">-->
-<!--</div>-->
 <div class="login-container ">
-
-    <form class="content layui-form">
-        <div style="height: 60px;color: white;text-align: center;">
-            <h3><%= title%></h3>
-        </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">账号：</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input account" placeholder="账号">
+    <div class="content row">
+        <h1><%= title %></h1>
+        <br>
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="input-group">
+                    <span class="input-group-addon">账号</span>
+                    <input type="text" class="form-control account" placeholder="账号">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="input-group">
+                    <span class="input-group-addon">密码</span>
+                    <input type="password" class="form-control password" placeholder="密码">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <button class="btn btn-block btn-primary" type="button" onclick="add()">注册</button>
+            </div>
+            <div class="row">
+                <a style="float: right;padding-top: 5px;" class="text-blue" href="/admin/login">立即登录</a>
             </div>
         </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">密码：</label>
-            <div class="layui-input-block">
-                <input type="password" class="layui-input password" placeholder="密码">
-            </div>
-        </div>
-        <div class="layui-btn-group layui-input-block">
-            <div class="layui-btn" onclick="add()">立即注册</div>
-            <!--<div class="layui-btn layui-btn-primary" onclick="window.location = '/admin/login'">登录</div>-->
-        </div>
-    </form>
+    </div>
 </div>
 <script type="text/javascript" src="/static/plugins/jquery.min.js"></script>
-<script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
+<script type="text/javascript" src="/static/plugins/zui/js/zui.js"></script>
+<script type="text/javascript" src="/static/plugins/web.tool.js"></script>
 <script>
-    var layer;
-    layui.use('layer', function () {
-        layer = layui.layer;
-    });
     function add() {
         var account = $('.account').val();
         var psw = $('.password').val();
-        $.ajax({
-            url: '/api/register',
-            beforeSend: function(request) {
-                request.setRequestHeader("restype","json");
-            },
+        $wt._request({
+            url: $wt.url.adminRegister,
             data: {
                 account: account,
                 password: psw,
             },
-            type: 'post',
             success: function (res) {
-                if (res.status === 'success') {
-                    console.log(res);
-                    layer.open({
-                        type: 0,
-                        title: '注册成功',
-                        content: '恭喜您注册成功',
-                        btn: ['立即登录'],
-                        yes: function () {
-                            window.location = '/admin/login'
-                        }
+                if (res.code == '000') {
+                    $wt._message({
+                        type: 'success',
+                        msg: res.message
                     });
-
-                } else {
-                    layer.msg(res.message);
+                    setTimeout(function () {
+                        window.location = '/admin/login';
+                    }, 2000);
                 }
             }
-        })
+        });
     }
 </script>
 </body>

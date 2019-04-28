@@ -36,7 +36,7 @@ router.post('/getUsers', async (req, res) => {
 });
 
 //// 设置侧边栏导航
-router.post('/setting/nav-list', async (req, res) => {
+router.post('/set-menu', async (req, res) => {
     let params = req.body;
     let settingController = new SettingController();
     let jsonResponse:JsonResponse = await settingController.settingNavigation(params);
@@ -44,7 +44,7 @@ router.post('/setting/nav-list', async (req, res) => {
 });
 
 //// 获取侧边栏导航
-router.get('/get-nav',  async (req, res) => {
+router.get('/get-menu',  async (req, res) => {
     let settingController = new SettingController();
     let jsonResponse:JsonResponse = await settingController.getNavigation();
     res.json(jsonResponse);

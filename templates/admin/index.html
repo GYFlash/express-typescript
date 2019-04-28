@@ -6,91 +6,21 @@
     <title><%= title %></title>
     <link rel="shortcut icon" href="/static/images/icons/favicon.ico"/>
     <link rel="bookmark" href="/static/images/icons/favicon.ico"/>
-    <link rel="stylesheet" href="/static/plugins/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/plugins/zui/css/zui.css">
     <link rel="stylesheet" href="/templatesJs/admin/css/style.css">
-    <style>
-        .layui-footer, .layui-body {
-            transition: margin-left .5s;
-        }
-        .layui-logo {
-            min-width: 200px;
-            width: auto !important;
-            padding-left: 20px;
-        }
-    </style>
 </head>
-<body class="layui-layout-body">
+<body>
     <div id="app">
         <transition name="appShow">
-            <div v-show="appShow" class="layui-layout layui-layout-admin">
-                <!-- 头部导航栏 -->
-                <div class="layui-header layui-bg-black">
-                    <div @click="layuiLogoDidClicked" class="layui-logo can-tap">
-                        <em v-if="showLeftNavBar" class="layui-icon layui-icon-spread-left"></em>
-                        <em v-if="!showLeftNavBar" class="layui-icon layui-icon-shrink-right"></em>
-                        <%= title%>
-                    </div>
-                    <ul class="layui-nav layui-layout-right">
-                        <li class="layui-nav-item">
-                            <a href="javascript:;">
-                                <img src="/static/images/icons/user_icon.png" class="layui-nav-img">
-                                区区电脑
-                            </a>
-                            <dl class="layui-nav-child">
-                                <dd><a href="">基本资料</a></dd>
-                                <dd><a href="">安全设置</a></dd>
-                                <dd @click="logout" style="cursor: pointer;"><a >退出</a></dd>
-                            </dl>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- 侧边导航栏 -->
-                <transition name="showLeftNavBar">
-                    <div v-show="showLeftNavBar" class="layui-side layui-bg-black">
-                        <div class="layui-side-scroll">
-                            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-                            <ul class="layui-nav layui-nav-tree layui-bg-black"  lay-filter="test">
-                                <li class="layui-nav-item">
-                                    <a class="" href="javascript:;">所有商品</a>
-                                    <dl class="layui-nav-child">
-                                        <dd><a href="javascript:;">列表一</a></dd>
-                                        <dd><a href="javascript:;">列表二</a></dd>
-                                        <dd><a href="javascript:;">列表三</a></dd>
-                                        <dd><a href="">超链接</a></dd>
-                                    </dl>
-                                </li>
-                                <li class="layui-nav-item">
-                                    <a href="javascript:;">解决方案</a>
-                                    <dl class="layui-nav-child">
-                                        <dd><a href="javascript:;">列表一</a></dd>
-                                        <dd><a href="javascript:;">列表二</a></dd>
-                                        <dd><a href="">超链接</a></dd>
-                                    </dl>
-                                </li>
-                                <li class="layui-nav-item"><a href="">云市场</a></li>
-                                <li class="layui-nav-item"><a href="">发布商品</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </transition>
-
-                <!-- 内容主体区域 -->
-                <div class="layui-body" :style="layuiBodyStyle">
-                    <h1 style="padding: 15px;">{{ vueTitle }}</h1>
-                    <div v-for="(item, index) in users" :key="index">{{ item.id }}- {{ item.account }}</div>
-                </div>
-
-                <div class="layui-footer" :style="layuiFooterStyle">
-                    <!-- 底部固定区域 -->
-                    © layui.com - 底部固定区域
-                </div>
+            <div v-show="appShow" >
+               <h1> {{ vueTitle }}</h1>
             </div>
         </transition>
     </div>
 </body>
 <script type="text/javascript" src="/static/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/static/plugins/zui/js/zui.js"></script>
+<script type="text/javascript" src="/static/plugins/web.tool.js"></script>
 <script type="text/javascript" src="/static/plugins/vue.min.js"></script>
-<script type="text/javascript" src="/static/plugins/layui/layui.js"></script>
 <script type="text/javascript" src="/templatesJs/admin/index.js"></script>
 </html>
