@@ -30,6 +30,7 @@ export class SettingController extends BaseController{
             let nav:Navigation = new Navigation();
             nav.id = navs[i].id;
             nav.title = navs[i].title;
+            nav.iconClass = navs[i].iconClass || 'icon icon-user';
             nav.subNavItems = JSON.stringify(navs[i].subNavItems);
             array.push(nav);
         }

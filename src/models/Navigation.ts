@@ -21,4 +21,10 @@ export class Navigation extends BaseEntity {
         charset: 'utf8'
     })
     subNavItems: string | undefined;
+
+    @Column({
+        type: 'text',
+        charset: 'utf8'
+    })
+    iconClass: string | undefined;
 }

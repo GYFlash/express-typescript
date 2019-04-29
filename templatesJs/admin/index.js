@@ -16,7 +16,7 @@ const app =  new Vue({
         navigationItems: [],
         tempNavs: [],
         currentNav: {
-            src: 'https://www.baidu.com'
+            routerPath: ''
         }
     },
     mounted: function () {

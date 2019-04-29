@@ -115,21 +115,7 @@
             border-radius: 42px;
             border: 1px solid white;
         }
-        @media (max-width: 768px) {
-            .g-sidebar {
-                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .9);
-            }
-            .g-nav-bar {
-                background-color: #37474f;
-                color: white;
-            }
-            .g-nav-bar .g-logo-content {
-                display: inline-flex;
-                flex-direction: row-reverse;
-                justify-content: end;
-                align-items: center;
-            }
-        }
+
         .float-right {
             float: right;
         }
@@ -227,6 +213,24 @@
             height: 100%;
             border: none;
         }
+        @media (max-width: 768px) {
+            .g-sidebar {
+                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .9);
+            }
+            .g-nav-bar {
+                background-color: #37474f;
+                color: white;
+            }
+            .g-nav-bar .g-logo-content {
+                display: inline-flex;
+                flex-direction: row-reverse;
+                justify-content: end;
+                align-items: center;
+            }
+            .admin-container, .admin-footer {
+                left: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -260,7 +264,7 @@
                         <ul>
                             <li v-for="(item, index) in navigationItems" :key="'item_'+index" class="g-menu">
                                 <a class="g-title"  href="#">
-                                    <span><i class="icon icon-user"></i><i>{{ item.title }}</i></span><em class="icon icon-chevron-left"></em>
+                                    <span><i :class="item.iconClass"></i><i>{{ item.title }}</i></span><em class="icon icon-chevron-left"></em>
                                 </a>
                                 <ul>
                                     <li v-for="(subItem, subIndex) in item.subNavItems" :key="'subItem_'+subIndex" @click="subNavDidClicked(subItem)"><a href="#">{{ subItem.title }}</a></li>
@@ -281,7 +285,7 @@
                         </div>
                     </div>
                     <div class="admin-container-iframe">
-                        <iframe class="" :src="currentNav.src"></iframe>
+                        <iframe class="" :src="currentNav.routerPath"></iframe>
                     </div>
                 </div>
 
