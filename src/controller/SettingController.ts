@@ -30,7 +30,7 @@ export class SettingController extends BaseController{
             let nav:Navigation = new Navigation();
             nav.id = navs[i].id;
             nav.title = navs[i].title;
-            nav.suvNavItems = JSON.stringify(navs[i].subNavItems);
+            nav.subNavItems = JSON.stringify(navs[i].subNavItems);
             array.push(nav);
         }
         let result = await connection.manager.save(array);
@@ -60,9 +60,9 @@ export class SettingController extends BaseController{
         let array:Array<Navigation> = [];
         for (let i = 0; i < navs.length; i++) {
             let nav:Navigation = navs[i];
-            if (navs[i].suvNavItems) {
+            if (navs[i].subNavItems) {
                 // @ts-ignore
-                nav.suvNavItems = JSON.parse(navs[i].suvNavItems);
+                nav.subNavItems = JSON.parse(navs[i].subNavItems);
             }
             array.push(nav);
         }

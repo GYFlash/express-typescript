@@ -23,12 +23,13 @@
         .g-sidebar {
             position: fixed;
             width: 200px;
-            top: 60px;
+            top: 50px;
             left: 0;
             bottom: 0;
             background-color: #37474f;
             color: white;
-            font-size: 16px;
+            font-size: 14px;
+            z-index: 10;
         }
         .g-sidebar ul li a {
             display: flex;
@@ -77,39 +78,42 @@
 
         .g-nav-bar {
             position: fixed;
-            height: 60px;
+            height: 50px;
             top: 0;
             left: 0;
             right: 0;
-            background-color: #668888;
-            color: white;
+            background-color: white;
+            color: #37474f;
             padding-right: 10px;
+            z-index: 10;
         }
-        .g-nav-bar::before {
-            display: block;
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background-color: #888888;
-            z-index: 1;
-            -webkit-transform: scaleY(.5);
-            -moz-transform: scaleY(.5);
-            -ms-transform: scaleY(.5);
-            -o-transform: scaleY(.5);
-            transform: scaleY(.5);
-        }
+        /*.g-nav-bar::before {*/
+            /*display: block;*/
+            /*content: '';*/
+            /*position: absolute;*/
+            /*bottom: 0;*/
+            /*left: 0;*/
+            /*right: 0;*/
+            /*height: 1px;*/
+            /*background-color: #f6f6f6;*/
+            /*z-index: 1;*/
+            /*-webkit-transform: scaleY(.5);*/
+            /*-moz-transform: scaleY(.5);*/
+            /*-ms-transform: scaleY(.5);*/
+            /*-o-transform: scaleY(.5);*/
+            /*transform: scaleY(.5);*/
+        /*}*/
         .g-nav-bar .g-logo {
             display: inline-block;
+            background-color: #37474f;
+            color: white;
         }
         .g-nav-bar .g-logo a {
             display: inline-block;
             width: 200px;
-            height: 60px;
+            height: 50px;
             text-align: center;
-            line-height: 60px;
+            line-height: 50px;
         }
         .g-nav-bar .icon-sliders {
             font-size: 20px;
@@ -132,6 +136,10 @@
             .g-sidebar {
                 box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .9);
             }
+            .g-nav-bar {
+                background-color: #37474f;
+                color: white;
+            }
             .g-nav-bar .g-logo-content {
                 display: inline-flex;
                 flex-direction: row-reverse;
@@ -142,12 +150,99 @@
         .float-right {
             float: right;
         }
-        .other-info {
-            height: 60px;
+        .g-nav-bar .other-info {
+            height: 50px;
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
             align-items: center;
+            z-index: 10;
+        }
+        .admin-container {
+            position: fixed;
+            top: 51px;
+            left: 200px;
+            bottom: 40px;
+            right: 0;
+            transition: all .3s;
+        }
+        .admin-footer {
+            position: fixed;
+            height: 40px;
+            left: 200px;
+            bottom: 0;
+            right: 0;
+            background-color: #f3f3f3;
+            transition: all .3s;
+            line-height: 40px;
+            padding-left: 10px;
+        }
+        .admin-container-fluid, .admin-footer-fluid {
+            left: 0;
+        }
+        .admin-container .header-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background-color: white;
+            box-shadow: 0 0 2px 0 rgba(0, 0, 0, .1);
+            z-index: 10;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .admin-container .header-bar .tempNav {
+            border-right: 1px solid #f6f6f6;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            padding: 0 10px;
+            cursor: pointer;
+            position: relative;
+        }
+        .admin-container .header-bar .tempNav:hover, .admin-container .header-bar .active {
+            background-color: #f6f6f6;
+        }
+        .admin-container .header-bar .tempNav .top-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: transparent;
+            transition: all .3s;
+        }
+        .admin-container .header-bar .tempNav:hover .top-line, .admin-container .header-bar .active .top-line {
+            background-color: #37474f;
+        }
+        .admin-container .header-bar .tempNav i {
+            display: inline-block;
+            height: 100%;
+            padding: 0 10px;
+        }
+        .admin-container .header-bar .tempNav .close {
+            height: 40px;
+            line-height: 40px;
+            width: 30px;
+            text-align: right;
+            float: right;
+        }
+        .admin-container .admin-container-iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 40px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        .admin-container .admin-container-iframe iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
@@ -155,6 +250,7 @@
     <div id="app">
         <transition name="appShow">
             <div v-show="appShow" class="container-fluid">
+                <!-- 页眉导航栏 -->
                 <nav class="g-nav-bar">
                     <div class="g-logo-content">
                         <li class="g-logo"><a href="#"><%= title%></a></li>
@@ -169,32 +265,47 @@
                                 <li><a href="###">操作</a></li>
                                 <li><a href="###">账号设置</a></li>
                                 <li class="divider"></li>
-                                <li><a href="###">退出</a></li>
+                                <li @click="logout"><a href="###">退出</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
+
+                <!-- 侧边栏 -->
                 <transition name="showLeftNavBar">
                     <nav v-show="showLeftNavBar" class="g-sidebar">
                         <ul>
-                            <li class="g-menu g-active">
-                                <a class="g-title" href="#"><span><i class="icon icon-cog"></i><i>设置</i></span> <em class="icon icon-chevron-left"></em></a>
+                            <li v-for="(item, index) in navigationItems" :key="'item_'+index" class="g-menu">
+                                <a class="g-title"  href="#">
+                                    <span><i class="icon icon-user"></i><i>{{ item.title }}</i></span><em class="icon icon-chevron-left"></em>
+                                </a>
                                 <ul>
-                                    <li><a href="#">系统设置</a></li>
-                                    <li><a href="#">侧边栏设置</a></li>
-                                </ul>
-                            </li>
-                            <li class="g-menu">
-                                <a class="g-title"  href="#"><span><i class="icon icon-user"></i><i>用户</i></span><em class="icon icon-chevron-left"></em></a>
-                                <ul>
-                                    <li><a href="#">普通用户管理</a></li>
-                                    <li><a href="#">会员管理</a></li>
+                                    <li v-for="(subItem, subIndex) in item.subNavItems" :key="'subItem_'+subIndex" @click="subNavDidClicked(subItem)"><a href="#">{{ subItem.title }}</a></li>
                                 </ul>
                             </li>
 
                         </ul>
                     </nav>
                 </transition>
+
+                <!-- 主体内容 -->
+                <div :class="{ 'admin-container': true, 'admin-container-fluid': !showLeftNavBar }">
+                    <div class="header-bar">
+                        <div v-for="(nav, index) in tempNavs" :key="'temp_'+ index" :class="{'tempNav': true, 'active': nav.active}">
+                            <span class="top-line"></span>
+                            <i @click="changeContent(index)" >{{nav.title}}</i>
+                            <div @click="closeTemp(index)" class="close">×</div>
+                        </div>
+                    </div>
+                    <div class="admin-container-iframe">
+                        <iframe class="" :src="currentNav.src"></iframe>
+                    </div>
+                </div>
+
+                <!-- 页脚 -->
+                <div :class="{ 'admin-footer': true, 'admin-footer-fluid': !showLeftNavBar }">
+                    <p><span>Express&typescript </span></p>
+                </div>
             </div>
         </transition>
     </div>
@@ -205,21 +316,25 @@
 <script type="text/javascript" src="/static/plugins/vue.min.js"></script>
 <script type="text/javascript" src="/templatesJs/admin/index.js"></script>
 <script>
-    (function () {
-        $('.g-sidebar .g-menu .g-title').click(function () {
-            if ($(this).parent().hasClass('g-active')) {
-                $(this).parent().removeClass('g-active');
-            } else {
-                $(this).parent().addClass('g-active');
-            }
-        });
-        $('.g-sidebar .g-menu ul li').click(function () {
-            $('.g-sidebar .g-menu ul .g-active').removeClass('g-active');
-            $(this).addClass('g-active');
-        });
-        $('.g-logo').click(function () {
-            window.location.reload();
-        });
-    })();
+    //// 绑定点击事件需要在 vue 组件渲染完成之后
+    function setClickEvents() {
+       setTimeout(function () {
+           $('.g-sidebar .g-menu .g-title').click(function () {
+               console.log(888)
+               if ($(this).parent().hasClass('g-active')) {
+                   $(this).parent().removeClass('g-active');
+               } else {
+                   $(this).parent().addClass('g-active');
+               }
+           });
+           $('.g-sidebar .g-menu ul li').click(function () {
+               $('.g-sidebar .g-menu ul .g-active').removeClass('g-active');
+               $(this).addClass('g-active');
+           });
+           $('.g-logo').click(function () {
+               window.location.reload();
+           });
+       }, 10);
+    }
 </script>
 </html>

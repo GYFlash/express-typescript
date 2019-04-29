@@ -20,5 +20,5 @@ export class Navigation extends BaseEntity {
         type: 'text',
         charset: 'utf8'
     })
-    suvNavItems: string | undefined;
+    subNavItems: string | undefined;
 }

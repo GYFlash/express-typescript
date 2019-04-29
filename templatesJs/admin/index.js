@@ -12,10 +12,16 @@ const app =  new Vue({
     data: {
         appShow: false,
         vueTitle: 'welcome use vue template!',
-        showLeftNavBar: true
+        showLeftNavBar: true,
+        navigationItems: [],
+        tempNavs: [],
+        currentNav: {
+            src: 'https://www.baidu.com'
+        }
     },
     mounted: function () {
         showApp(this);
+        this.loadNavigation();
     },
     methods: {
         /**
@@ -31,9 +37,65 @@ const app =  new Vue({
         logoDidClicked: function () {
             this.showLeftNavBar = !this.showLeftNavBar;
             console.log(this.showLeftNavBar);
+        },
+        /**
+         * 加载导航栏内容
+         */
+        loadNavigation: function () {
+            var _this = this;
+            $wt._request({
+                url: $wt.url.adminGetMenu,
+                useToken: true,
+                success: function (res) {
+                    console.log(res.data);
+                    _this.navigationItems = res.data;
+                    setClickEvents();
+                }
+            })
+        },
+        subNavDidClicked: function (nav) {
+            if (this.tempNavs.indexOf(nav) > -1) {
+                this.changeContent(this.tempNavs.indexOf(nav));
+            } else {
+                this.tempNavs.push(nav);
+                this.changeContent(null);
+            }
+            if (this.tempNavs.length > 21) {
+                this.closeTemp(0)
+            }
+
+        },
+        changeContent: function (index) {
+            for (var i = 0; i < this.tempNavs.length; i++) {
+                this.tempNavs[i]['active'] = false;
+            }
+            if (this.tempNavs.length === 0) { return }
+            if (index != null) {
+                console.log(index);
+                this.tempNavs[index]['active'] = true;
+                this.currentNav = this.tempNavs[index];
+            } else {
+                this.tempNavs[this.tempNavs.length - 1]['active'] = true;
+                this.currentNav = this.tempNavs[this.tempNavs.length - 1];
+            }
+        },
+        closeTemp: function (index) {
+            if (index > -1) {
+                this.tempNavs.splice(index, 1);
+                this.changeContent(null);
+            }
         }
     },
-    computed: {}
+    computed: {},
+    watch: {
+        tempNavs: function () {
+            if (this.tempNavs.length === 0) {
+                this.currentNav = {
+                    src: './home.html'
+                }
+            }
+        }
+    }
 });
 
 function showApp(vue) {
@@ -48,4 +110,4 @@ window.onresize = function () {
     } else {
         app.showLeftNavBar = false;
     }
-}
+};
