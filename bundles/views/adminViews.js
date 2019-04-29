@@ -24,7 +24,7 @@ const router = express.Router();
 //// 首页
 router.get('/', (req, res) => {
     res.render('admin/index', {
-        title: 'Welcome to express admin'
+        title: 'Express-admin'
     });
 });
 //// 注册

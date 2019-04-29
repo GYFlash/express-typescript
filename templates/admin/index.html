@@ -8,12 +8,193 @@
     <link rel="bookmark" href="/static/images/icons/favicon.ico"/>
     <link rel="stylesheet" href="/static/plugins/zui/css/zui.css">
     <link rel="stylesheet" href="/templatesJs/admin/css/style.css">
+    <style>
+        ul, li, i {
+            font-style: normal;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            -webkit-margin-start: 0;
+        }
+        a, a:hover, a:active, a:visited, a:link {
+            color: inherit;
+            text-decoration: none;
+        }
+        .g-sidebar {
+            position: fixed;
+            width: 200px;
+            top: 60px;
+            left: 0;
+            bottom: 0;
+            background-color: #37474f;
+            color: white;
+            font-size: 16px;
+        }
+        .g-sidebar ul li a {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .g-sidebar ul li a em {
+            float: right;
+            transition: all .3s;
+            font-size: 14px;
+        }
+        .g-sidebar ul li ul {
+            height: 0;
+            overflow: hidden;
+            font-size: 14px;
+        }
+        .g-sidebar ul li ul li a {
+            padding-left: 40px;
+        }
+        .g-sidebar ul .g-active ul {
+            height: auto;
+        }
+        .g-sidebar ul .g-menu ul .g-active {
+            background-color: #228888;
+        }
+        .g-sidebar ul li .g-title {
+            border-left: 4px solid #37474f;
+        }
+        .g-sidebar ul .g-active .g-title {
+            background-color: rgba(0, 0, 0, .3);
+            border-left: 4px solid #228888;
+            transition: border-left-color .3s;
+        }
+        .g-sidebar ul .g-active .g-title span {
+            display: inline-block;
+            /*padding-left: 10px;*/
+        }
+        .g-sidebar ul li .g-title span .icon {
+            margin-right: 10px;
+        }
+        .g-sidebar ul .g-active .g-title em {
+            transform: rotateZ(-90deg);
+        }
+
+        .g-nav-bar {
+            position: fixed;
+            height: 60px;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #668888;
+            color: white;
+            padding-right: 10px;
+        }
+        .g-nav-bar::before {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: #888888;
+            z-index: 1;
+            -webkit-transform: scaleY(.5);
+            -moz-transform: scaleY(.5);
+            -ms-transform: scaleY(.5);
+            -o-transform: scaleY(.5);
+            transform: scaleY(.5);
+        }
+        .g-nav-bar .g-logo {
+            display: inline-block;
+        }
+        .g-nav-bar .g-logo a {
+            display: inline-block;
+            width: 200px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+        }
+        .g-nav-bar .icon-sliders {
+            font-size: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .g-nav-bar .g-logo-content {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .g-nav-bar .user_icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 42px;
+            border: 1px solid white;
+        }
+        @media (max-width: 768px) {
+            .g-sidebar {
+                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .9);
+            }
+            .g-nav-bar .g-logo-content {
+                display: inline-flex;
+                flex-direction: row-reverse;
+                justify-content: end;
+                align-items: center;
+            }
+        }
+        .float-right {
+            float: right;
+        }
+        .other-info {
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
         <transition name="appShow">
             <div v-show="appShow" class="container-fluid">
-               <h1> {{ vueTitle }}</h1>
+                <nav class="g-nav-bar">
+                    <div class="g-logo-content">
+                        <li class="g-logo"><a href="#"><%= title%></a></li>
+                        <span v-show="showLeftNavBar" @click="logoDidClicked" class="icon icon-sliders"></span>
+                        <span v-show="!showLeftNavBar" @click="logoDidClicked" class="icon icon-sliders" style="transform: rotateY(180deg);"></span>
+                    </div>
+                    <div class="float-right other-info">
+                        <div class="btn-group">
+                            <img class="user_icon" src="/static/images/icons/user_icon.png" alt="">
+                            <span style="cursor: pointer;" class="dropdown-toggle" data-toggle="dropdown">区区电脑 <span class="caret"></span></span>
+                            <ul class="dropdown-menu pull-right" role="menu">
+                                <li><a href="###">操作</a></li>
+                                <li><a href="###">账号设置</a></li>
+                                <li class="divider"></li>
+                                <li><a href="###">退出</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <transition name="showLeftNavBar">
+                    <nav v-show="showLeftNavBar" class="g-sidebar">
+                        <ul>
+                            <li class="g-menu g-active">
+                                <a class="g-title" href="#"><span><i class="icon icon-cog"></i><i>设置</i></span> <em class="icon icon-chevron-left"></em></a>
+                                <ul>
+                                    <li><a href="#">系统设置</a></li>
+                                    <li><a href="#">侧边栏设置</a></li>
+                                </ul>
+                            </li>
+                            <li class="g-menu">
+                                <a class="g-title"  href="#"><span><i class="icon icon-user"></i><i>用户</i></span><em class="icon icon-chevron-left"></em></a>
+                                <ul>
+                                    <li><a href="#">普通用户管理</a></li>
+                                    <li><a href="#">会员管理</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </transition>
             </div>
         </transition>
     </div>
@@ -23,4 +204,22 @@
 <script type="text/javascript" src="/static/plugins/web.tool.js"></script>
 <script type="text/javascript" src="/static/plugins/vue.min.js"></script>
 <script type="text/javascript" src="/templatesJs/admin/index.js"></script>
+<script>
+    (function () {
+        $('.g-sidebar .g-menu .g-title').click(function () {
+            if ($(this).parent().hasClass('g-active')) {
+                $(this).parent().removeClass('g-active');
+            } else {
+                $(this).parent().addClass('g-active');
+            }
+        });
+        $('.g-sidebar .g-menu ul li').click(function () {
+            $('.g-sidebar .g-menu ul .g-active').removeClass('g-active');
+            $(this).addClass('g-active');
+        });
+        $('.g-logo').click(function () {
+            window.location.reload();
+        });
+    })();
+</script>
 </html>

@@ -18,3 +18,4 @@ function showApp(vue) {
     document.getElementById('app').style.display = 'block';
     vue.appShow = true;
 }
+
