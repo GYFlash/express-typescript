@@ -77,6 +77,7 @@ const app =  new Vue({
         },
         showIconsView: function (index) {
             this.selectIconIndex = index;
+            $('#editGroupModal').modal('hide');
             $('#icons').modal({position: 100});
         },
         iconDidSelected: function (iconName) {

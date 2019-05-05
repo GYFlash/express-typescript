@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="158e4214-e39b-4ef8-b3b9-aef359cedda9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bundles/apis/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/apis/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bundles/apis/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/apis/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bundles/views/adminViews.js" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/views/adminViews.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bundles/views/adminViews.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/views/adminViews.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/web.tool.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/web.tool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apis/Index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/Index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/TokenMiddleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/TokenMiddleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/common.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/common.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/SettingController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/SettingController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/AdminViews.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AdminViews.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/setting/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/setting/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templatesJs/admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/templatesJs/admin/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templatesJs/admin/setting/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/templatesJs/admin/setting/menu.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -159,7 +146,7 @@
           <entry key="gitattributes" value="1" />
           <entry key="gitignore" value="2" />
           <entry key="html" value="45" />
-          <entry key="js" value="36" />
+          <entry key="js" value="37" />
           <entry key="json" value="2" />
           <entry key="md" value="1" />
           <entry key="ts" value="71" />
@@ -170,7 +157,7 @@
           <entry key="CSS" value="6" />
           <entry key="HTML" value="45" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="36" />
+          <entry key="JavaScript" value="37" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="TypeScript" value="71" />
         </counts>
@@ -180,16 +167,16 @@
           <entry key="css" value="114" />
           <entry key="gitattributes" value="35" />
           <entry key="gitignore" value="7" />
-          <entry key="html" value="9679" />
-          <entry key="js" value="5400" />
+          <entry key="html" value="9680" />
+          <entry key="js" value="5407" />
           <entry key="ts" value="38688" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="114" />
-          <entry key="HTML" value="9679" />
-          <entry key="JavaScript" value="5400" />
+          <entry key="HTML" value="9680" />
+          <entry key="JavaScript" value="5407" />
           <entry key="PLAIN_TEXT" value="42" />
           <entry key="TypeScript" value="38688" />
         </counts>
@@ -203,24 +190,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="52" column="41" lean-forward="true" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+            <state relative-caret-position="540">
+              <caret line="69" column="34" lean-forward="true" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
               <folding>
                 <element signature="n#style#0;n#span#1;n#div#0;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/AdminViews.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -266,6 +244,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
               <caret line="81" column="37" lean-forward="true" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templatesJs/admin/setting/menu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="79" column="44" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -393,13 +383,13 @@
         <option value="$PROJECT_DIR$/templates/admin/setting/menu.html" />
         <option value="$PROJECT_DIR$/src/views/AdminViews.ts" />
         <option value="$PROJECT_DIR$/templates/admin/home/home.html" />
-        <option value="$PROJECT_DIR$/templatesJs/admin/setting/menu.js" />
         <option value="$PROJECT_DIR$/templatesJs/admin/home/home.js" />
         <option value="$PROJECT_DIR$/templatesJs/admin/index.js" />
         <option value="$PROJECT_DIR$/src/common/common.ts" />
         <option value="$PROJECT_DIR$/public/plugins/web.tool.js" />
         <option value="$PROJECT_DIR$/src/common/TokenMiddleware.ts" />
         <option value="$PROJECT_DIR$/templates/admin/index.html" />
+        <option value="$PROJECT_DIR$/templatesJs/admin/setting/menu.js" />
       </list>
     </option>
   </component>
@@ -475,6 +465,31 @@
               <item name="express-admin" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="setting" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="templatesJs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="templatesJs" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="templatesJs" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="setting" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -584,12 +599,12 @@
       <workItem from="1556454378594" duration="1570000" />
       <workItem from="1556499174656" duration="11299000" />
       <workItem from="1556517229722" duration="15156000" />
-      <workItem from="1557017251959" duration="16258000" />
+      <workItem from="1557017251959" duration="17968000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180863000" />
+    <option name="totallyTimeSpent" value="182573000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -611,7 +626,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33039647" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32819384" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.20154186" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.20154186" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32929516" />
@@ -619,7 +634,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32819384" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.23348017" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.23348017" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -863,16 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templatesJs/admin/setting/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="72" column="14" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/AdminViews.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -941,11 +946,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="52" column="41" lean-forward="true" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+        <state relative-caret-position="540">
+          <caret line="69" column="34" lean-forward="true" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
           <folding>
             <element signature="n#style#0;n#span#1;n#div#0;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templatesJs/admin/setting/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="79" column="44" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
