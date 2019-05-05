@@ -52,7 +52,10 @@ const app =  new Vue({
         },
         removeGroup: function (index) {
             if (index > -1 && this.navigationItems.length >= 2) {
-                this.navigationItems.splice(index, 1);
+                var array = this.navigationItems;
+                array.splice(index,  1);
+                this.navigationItems = array;
+                // this.navigationItems.splice(index, 1);
             } else {
                 $wt._message({
                     msg: '至少保留一条分组'

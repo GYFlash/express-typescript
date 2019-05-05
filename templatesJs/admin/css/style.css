@@ -30,3 +30,9 @@
 .can-tap {
     cursor: pointer;
 }
+
+
+/* 白色背景 */
+.background-color-white {
+    background-color: white;
+}

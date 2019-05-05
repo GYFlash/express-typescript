@@ -63,6 +63,9 @@ const app =  new Vue({
             if (this.tempNavs.length > 21) {
                 this.closeTemp(0)
             }
+            if (window.document.documentElement.clientWidth < windowCriticalValue) {
+                this.showLeftNavBar = false;
+            }
 
         },
         changeContent: function (index) {

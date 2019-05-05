@@ -15,49 +15,87 @@
         input {
             color: #3280fc;
         }
+        html, body {
+            min-height: 100%;
+            background-color: #f2f2f2;
+        }
+        .container-fluid {
+            padding-top: 10px;
+        }
+        select option {
+            line-height: 40px !important;
+            padding: 5px;
+            display: inline-block;
+            min-height: 30px;
+        }
     </style>
 </head>
 <body>
 <div id="app">
     <transition name="appShow">
         <div v-show="appShow" class="container-fluid">
-            <form class="form-horizontal">
-                <div class="form-group col-sm-8">
-                    <label class="col-sm-2">导航分组</label>
-                    <div v-if="navigationItems[0]" class="col-sm-4">
-                        <select v-model="activeIndex" class="form-control">
-                            <option v-for="(item, index) in navigationItems" :key="'item_'+index" :value="index">{{ item.title }}</option>
-                        </select>
+            <form class="form-horizontal background-color-white col-sm-12">
+                <br>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="form-group col-sm-8">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label class="col-sm-2">导航分组</label>
+                                <div v-if="navigationItems[0]" class="col-sm-4">
+                                    <select v-model="activeIndex" class="form-control">
+                                        <option class="group-option" v-for="(item, index) in navigationItems" :key="'item_'+index" :value="index">{{ item.title }}</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-3"><span v-if="navigationItems[0]" :class="navigationItems[activeIndex].iconClass" style="line-height: 30px"></span></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-3"><span v-if="navigationItems[0]" :class="navigationItems[activeIndex].iconClass" style="line-height: 30px"></span></div>
-
                 </div>
-                <div class="form-group col-sm-8">
-                    <div class="col-sm-2"></div>
+                <div class="row">
+                    <div class="form-group col-sm-8">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
+                            <button class="btn btn-primary" type="button" @click="editGroupModal">编辑分组</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div v-if="navigationItems[activeIndex]" class="row">
+                    <div class="col-sm-8 form-group" v-for="(sub, index) in navigationItems[activeIndex].subNavItems">
+                        <label class="col-sm-2">标题</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" placeholder="标题" v-model="sub.title">
+                        </div>
+                        <label class="col-sm-2">路由</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" placeholder="路由" v-model="sub.routerPath">
+                        </div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-2">
+                            <div class="btn btn-danger" @click="removeSub(index)">移除</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-8">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
+                            <button class="btn btn-success" type="button" @click="add">添加</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
                     <div class="col-sm-8">
-                        <button class="btn btn-primary" type="button" @click="editGroupModal">编辑分组</button>
-                    </div>
-                </div>
-                <div v-if="navigationItems[0]" v-for="(sub, index) in navigationItems[activeIndex].subNavItems" class="form-group col-sm-8">
-                    <label class="col-sm-2">标题</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="标题" v-model="sub.title">
-                    </div>
-                    <label class="col-sm-2">路由</label>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" placeholder="路由" v-model="sub.routerPath">
-                    </div>
-                    <div class="btn btn-danger col-sm-1" @click="removeSub(index)">移除</div>
-                </div>
-                <div class="form-group col-sm-8">
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-8">
-                        <button class="btn btn-success" type="button" @click="add">添加</button>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="col-sm-2"></div>
                         <div class="btn btn-default" @click="save">保存</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <br>
                     </div>
                 </div>
             </form>
@@ -68,25 +106,34 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
-                            <h4 class="modal-title">标题</h4>
+                            <h4 class="modal-title">编辑分组</h4>
                         </div>
                         <div class="modal-body">
-                            <form v-if="navigationItems[0]" class="form-horizontal" style="height: auto;">
-                                <div v-for="(item, index) in navigationItems" class="form-group col-sm-12">
-                                    <label class="col-sm-2">标题</label>
-                                    <div class="col-sm-3">
-                                        <input type="text" class="form-control" placeholder="标题" v-model="item.title">
+                            <br>
+                            <br>
+                            <form v-if="navigationItems[0]" class="form-horizontal">
+                                <div v-for="(item, index) in navigationItems" class="row">
+                                    <div class="form-group col-sm-12">
+                                        <label class="col-sm-2">标题</label>
+                                        <div class="col-sm-3">
+                                            <input type="text" class="form-control" placeholder="标题" v-model="item.title">
+                                        </div>
+                                        <label class="col-sm-2">图标</label>
+                                        <div class="col-sm-2">
+                                            <input v-if="item" type="text" class="form-control" placeholder="路由" v-model="item.iconClass">
+                                        </div>
+                                        <div class="col-sm-2"></div>
+                                        <div class="col-sm-2">
+                                            <div class="btn btn-danger" @click="removeGroup(index)">移除</div>
+                                        </div>
                                     </div>
-                                    <label class="col-sm-2">图标</label>
-                                    <div class="col-sm-2">
-                                        <input v-if="item" type="text" class="form-control" placeholder="路由" v-model="item.iconClass">
-                                    </div>
-                                    <div class="btn btn-danger col-sm-1" @click="removeGroup(index)">移除</div>
                                 </div>
-                                <div class="form-group col-sm-8">
-                                    <div class="col-sm-2"></div>
-                                    <div class="col-sm-8">
-                                        <button class="btn btn-success" type="button" @click="addGroup">添加</button>
+                                <div class="row">
+                                    <div class="form-group col-sm-8">
+                                        <div class="col-sm-2"></div>
+                                        <div class="col-sm-8">
+                                            <button class="btn btn-success" type="button" @click="addGroup">添加</button>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -97,6 +144,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </transition>
 </div>
