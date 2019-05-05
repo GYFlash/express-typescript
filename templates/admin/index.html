@@ -36,7 +36,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
+            padding: 15px;
         }
         .g-sidebar ul li a em {
             float: right;
@@ -47,9 +47,10 @@
             height: 0;
             overflow: hidden;
             font-size: 14px;
+            background-color: rgba(0, 0, 0, .2);
         }
         .g-sidebar ul li ul li a {
-            padding-left: 40px;
+            padding: 10px 10px 10px 40px;
         }
         .g-sidebar ul .g-active ul {
             height: auto;
@@ -70,6 +71,9 @@
         }
         .g-sidebar ul li .g-title span .icon {
             margin-right: 10px;
+        }
+        .g-sidebar ul li .g-title em {
+            font-size: 12px;
         }
         .g-sidebar ul .g-active .g-title em {
             transform: rotateZ(-90deg);
@@ -278,6 +282,7 @@
                 <!-- 主体内容 -->
                 <div :class="{ 'admin-container': true, 'admin-container-fluid': !showLeftNavBar }">
                     <div class="header-bar">
+                        <a class="icon icon-home tempNav" href="/admin"></a>
                         <div v-for="(nav, index) in tempNavs" :key="'temp_'+ index" :class="{'tempNav': true, 'active': nav.active}">
                             <span class="top-line"></span>
                             <i @click="changeContent(index)" >{{nav.title}}</i>
@@ -307,7 +312,6 @@
     function setClickEvents() {
        setTimeout(function () {
            $('.g-sidebar .g-menu .g-title').click(function () {
-               console.log(888)
                if ($(this).parent().hasClass('g-active')) {
                    $(this).parent().removeClass('g-active');
                } else {

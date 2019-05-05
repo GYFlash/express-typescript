@@ -71,4 +71,24 @@ export class SettingController extends BaseController{
         this.jsonResponse.data = array;
         return this.jsonResponse;
     }
+
+    public async deleteNavigation(params:any):Promise<JsonResponse> {
+        let connection:Connection = await this._connectionOpen();
+        if (!connection) {
+            this.jsonResponse = new JsonResponseError();
+            this.jsonResponse.message = '数据库连接失败';
+            return this.jsonResponse;
+        }
+        let id = params.id;
+        let nav:Navigation|undefined = await Navigation.findOne({id: id});
+        if (!nav) {
+            this.jsonResponse = new JsonResponseError();
+            this.jsonResponse.message = '该导航不存在';
+            return this.jsonResponse;
+        }
+        await Navigation.remove(nav);
+        this.jsonResponse = new JsonResponseSuccess();
+        this.jsonResponse.message = '删除成功';
+        return this.jsonResponse;
+    }
 }

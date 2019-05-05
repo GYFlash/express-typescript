@@ -19,7 +19,8 @@ const TokenMiddleware = async function (req:any, res:any, next:any) {
         if (token == 'undefined' || token == 'null' || token == '') {
             res.json({
                 status: 'error',
-                message: '未登录'
+                message: '未登录',
+                code: '201'
             })
         }  else {
             let result:TokenResult = await Token.check(token);

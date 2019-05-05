@@ -16,7 +16,7 @@ const app =  new Vue({
         navigationItems: [],
         tempNavs: [],
         currentNav: {
-            routerPath: ''
+            routerPath: '/admin/home'
         }
     },
     mounted: function () {
@@ -24,6 +24,9 @@ const app =  new Vue({
         this.loadNavigation();
     },
     methods: {
+        homeClick: function () {
+            this.currentNav.routerPath = '/admin/home';
+        },
         /**
          * 退出登录
          */
@@ -60,11 +63,16 @@ const app =  new Vue({
                 this.tempNavs.push(nav);
                 this.changeContent(null);
             }
-            if (this.tempNavs.length > 21) {
-                this.closeTemp(0)
-            }
+
             if (window.document.documentElement.clientWidth < windowCriticalValue) {
                 this.showLeftNavBar = false;
+                if (this.tempNavs.length > 3) {
+                    this.closeTemp(0)
+                }
+            } else {
+                if (this.tempNavs.length > 21) {
+                    this.closeTemp(0)
+                }
             }
 
         },
@@ -94,7 +102,7 @@ const app =  new Vue({
         tempNavs: function () {
             if (this.tempNavs.length === 0) {
                 this.currentNav = {
-                    src: './home.html'
+                    routerPath: '/admin/home'
                 }
             }
         }

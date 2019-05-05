@@ -49,4 +49,13 @@ router.get('/get-menu',  async (req, res) => {
     let jsonResponse:JsonResponse = await settingController.getNavigation();
     res.json(jsonResponse);
 });
+
+//// 删除侧边栏导航
+router.post('/del-menu', async function (req, res) {
+    let params = req.body;
+    let settingController = new SettingController();
+    let jsonResponse:JsonResponse = await settingController.deleteNavigation(params);
+    res.json(jsonResponse);
+});
+
 module.exports = router;

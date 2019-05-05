@@ -15,6 +15,13 @@ router.get('/', (req, res) => {
     })
 });
 
+//// 主页
+router.get('/home', (req, res) => {
+    res.render('admin/home/home', {
+        title: '主页'
+    })
+});
+
 //// 注册
 router.get('/register', async (req, res) => {
     res.render('admin/register', {

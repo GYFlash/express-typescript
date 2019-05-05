@@ -10,11 +10,14 @@ const app =  new Vue({
         vueTitle: 'welcome use vue template!',
         navigationItems: [{subNavItems: [], iconClass: ''}],
         activeIndex: 0,
-        currentNavGroup: {}
+        currentNavGroup: {},
+        iconArray: [],
+        selectIconIndex: null
     },
     mounted: function () {
         showApp(this);
         this.loadNavigation();
+        this.iconArray = JSON.parse($wt.zuiIcons)
     },
     methods: {
         /**
@@ -51,19 +54,34 @@ const app =  new Vue({
             }
         },
         removeGroup: function (index) {
-            if (index > -1 && this.navigationItems.length >= 2) {
-                var array = this.navigationItems;
-                array.splice(index,  1);
-                this.navigationItems = array;
-                // this.navigationItems.splice(index, 1);
-            } else {
-                $wt._message({
-                    msg: '至少保留一条分组'
-                })
-            }
+            var _this = this;
+            $wt._request({
+                url: $wt.url.adminDelMenu,
+                data: {
+                    id: this.navigationItems[index].id
+                },
+                useToken: true,
+                success: function (res) {
+                    if (res.code == '000') {
+                        $wt._message({
+                            msg: res.message,
+                            type: 'success'
+                        })
+                        _this.loadNavigation();
+                    }
+                }
+            })
         },
         editGroupModal: function () {
             $('#editGroupModal').modal({position: 100});
+        },
+        showIconsView: function (index) {
+            this.selectIconIndex = index;
+            $('#icons').modal({position: 100});
+        },
+        iconDidSelected: function (iconName) {
+            this.navigationItems[this.selectIconIndex].iconClass = 'icon ' + iconName;
+            $('#icons').modal('hide');
         },
         save: function () {
             $wt._request({

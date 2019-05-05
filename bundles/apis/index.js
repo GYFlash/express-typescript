@@ -56,5 +56,14 @@ router.get('/get-menu', (req, res) => __awaiter(this, void 0, void 0, function* 
     let jsonResponse = yield settingController.getNavigation();
     res.json(jsonResponse);
 }));
+//// 删除侧边栏导航
+router.post('/del-menu', function (req, res) {
+    return __awaiter(this, void 0, void 0, function* () {
+        let params = req.body;
+        let settingController = new SettingController_1.SettingController();
+        let jsonResponse = yield settingController.deleteNavigation(params);
+        res.json(jsonResponse);
+    });
+});
 module.exports = router;
 //# sourceMappingURL=Index.js.map

@@ -27,6 +27,12 @@ router.get('/', (req, res) => {
         title: 'Express-admin'
     });
 });
+//// 主页
+router.get('/home', (req, res) => {
+    res.render('admin/home/home', {
+        title: '主页'
+    });
+});
 //// 注册
 router.get('/register', (req, res) => __awaiter(this, void 0, void 0, function* () {
     res.render('admin/register', {

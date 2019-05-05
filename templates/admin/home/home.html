@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title><%= title %></title>
+  <link rel="shortcut icon" href="/static/images/icons/favicon.ico"/>
+  <link rel="bookmark" href="/static/images/icons/favicon.ico"/>
+  <link rel="stylesheet" href="/static/plugins/zui/css/zui.css">
+  <link rel="stylesheet" href="/templatesJs/admin/css/style.css">
+</head>
+<body>
+<div id="app">
+  <transition name="appShow">
+    <div v-show="appShow" class="container-fluid">
+      <h1>{{ vueTitle }}</h1>
+    </div>
+  </transition>
+</div>
+</body>
+<script type="text/javascript" src="/static/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="/static/plugins/zui/js/zui.js"></script>
+<script type="text/javascript" src="/static/plugins/web.tool.js"></script>
+<script type="text/javascript" src="/static/plugins/vue.min.js"></script>
+<script type="text/javascript" src="/templatesJs/admin/home/home.js"></script>
+</html>

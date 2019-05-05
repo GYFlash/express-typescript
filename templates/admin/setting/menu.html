@@ -119,9 +119,11 @@
                                             <input type="text" class="form-control" placeholder="标题" v-model="item.title">
                                         </div>
                                         <label class="col-sm-2">图标</label>
-                                        <div class="col-sm-2">
-                                            <input v-if="item" type="text" class="form-control" placeholder="路由" v-model="item.iconClass">
-                                        </div>
+                                        <label class="col-sm-1">
+                                            <em v-if="item" @click="showIconsView(index)" :class="item.iconClass" style="padding: 5px 15px; border: 1px solid gainsboro; background-color: #f3f3f3;
+border-radius: 2px;cursor: pointer;"></em>
+                                            <!--<input v-if="item" type="text" class="form-control" placeholder="路由" v-model="item.iconClass">-->
+                                        </label>
                                         <div class="col-sm-2"></div>
                                         <div class="col-sm-2">
                                             <div class="btn btn-danger" @click="removeGroup(index)">移除</div>
@@ -144,14 +146,43 @@
                     </div>
                 </div>
             </div>
-
+            <!-- 编辑分组 -->
+            <div class="modal fade" id="icons">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+                            <h4 class="modal-title">选择图标</h4>
+                        </div>
+                        <div class="modal-body">
+                            <br>
+                            <br>
+                            <div class="row">
+                                <label v-for="(item, index) in iconArray" :key="index" :class="'icon '+ item +' col-sm-1 text-blue'" style="padding: 10px;cursor: pointer;" @click="iconDidSelected(item)"></label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn " data-dismiss="modal">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </transition>
 </div>
+
 </body>
+
 <script type="text/javascript" src="/static/plugins/jquery.min.js"></script>
 <script type="text/javascript" src="/static/plugins/zui/js/zui.js"></script>
 <script type="text/javascript" src="/static/plugins/web.tool.js"></script>
 <script type="text/javascript" src="/static/plugins/vue.min.js"></script>
 <script type="text/javascript" src="/templatesJs/admin/setting/menu.js"></script>
+<script>
+    let array = [];
+    $('#iconsExample ul li').each(function (index, item) {
+        array.push($(item).find('a').find('i').attr('class'))
+    })
+    console.log(JSON.stringify(array))
+</script>
 </html>

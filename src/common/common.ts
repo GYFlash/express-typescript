@@ -27,9 +27,11 @@ enum JsonResponseStatusCode {
 class TokenResult {
     data:any;
     message:string;
-    constructor (data:any, message:string) {
+    code:string;
+    constructor (data:any, message:string, code:string) {
         this.data = data;
         this.message = message;
+        this.code = code;
     }
 }
 
@@ -80,9 +82,9 @@ class Token {
                     } else if (err.message == 'jwt expired') {
                         message = '登录超时';
                     }
-                    resolve(new TokenResult(false,  message))
+                    resolve(new TokenResult(false,  message, '201'))
                 } else {
-                    resolve(new TokenResult(decode, ''))
+                    resolve(new TokenResult(decode, '', '000'))
                 }
             })
         });
