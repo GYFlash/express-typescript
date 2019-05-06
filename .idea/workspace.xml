@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="158e4214-e39b-4ef8-b3b9-aef359cedda9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="158e4214-e39b-4ef8-b3b9-aef359cedda9" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -124,7 +122,7 @@
     <session id="2134707006">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
@@ -193,8 +191,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="323" column="16" lean-forward="true" selection-start-line="323" selection-start-column="16" selection-end-line="323" selection-end-column="16" />
+            <state relative-caret-position="292">
+              <caret line="318" column="63" lean-forward="true" selection-start-line="318" selection-start-column="63" selection-end-line="318" selection-end-column="63" />
               <folding>
                 <element signature="n#style#0;n#span#1;n#div#0;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -323,7 +321,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="39" />
     <option name="y" value="-30" />
     <option name="width" value="2445" />
@@ -345,53 +343,6 @@
             <path>
               <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="express-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="zui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="setting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
               <item name="templatesJs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -399,13 +350,6 @@
               <item name="express-admin" type="462c0819:PsiDirectoryNode" />
               <item name="templatesJs" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="templatesJs" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="setting" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -517,12 +461,12 @@
       <workItem from="1557017251959" duration="30234000" />
       <workItem from="1557103630248" duration="4198000" />
       <workItem from="1557108402729" duration="1260000" />
-      <workItem from="1557123626494" duration="871000" />
+      <workItem from="1557123626494" duration="1615000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201168000" />
+    <option name="totallyTimeSpent" value="201912000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -535,16 +479,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1721" height="1041" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14421365" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14421365" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33039647" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32819384" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.20154186" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.20154186" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32929516" />
@@ -552,7 +495,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32819384" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.05506608" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3270925" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -875,8 +818,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="323" column="16" lean-forward="true" selection-start-line="323" selection-start-column="16" selection-end-line="323" selection-end-column="16" />
+        <state relative-caret-position="292">
+          <caret line="318" column="63" lean-forward="true" selection-start-line="318" selection-start-column="63" selection-end-line="318" selection-end-column="63" />
           <folding>
             <element signature="n#style#0;n#span#1;n#div#0;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

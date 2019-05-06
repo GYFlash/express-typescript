@@ -1,1 +1,1 @@
-*.html linguist-language=typescript
+*.html .css .js linguist-language=typescript
