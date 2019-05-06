@@ -47,5 +47,9 @@ router.get('/login', (req, res) => {
 router.get('/set-menu', (req, res) => {
     res.render('admin/setting/menu', { title: '设置侧边导航栏' });
 });
+//// 设置-管理员设置
+router.get('/manager', (req, res) => {
+    res.render('admin/setting/manager', { title: '管理员' });
+});
 module.exports = router;
 //# sourceMappingURL=AdminViews.js.map
