@@ -7,19 +7,33 @@
     <link rel="shortcut icon" href="/static/images/icons/favicon.ico"/>
     <link rel="bookmark" href="/static/images/icons/favicon.ico"/>
     <link rel="stylesheet" href="/static/plugins/zui/css/zui.css">
+    <link rel="stylesheet" href="/static/plugins/zui/lib/datagrid/zui.datagrid.min.css">
     <link rel="stylesheet" href="/templatesJs/admin/css/style.css">
+    <style>
+        html,body {
+            min-height: 100%;
+            background-color: #f3f3f3;
+        }
+        .datagrid {
+            margin-top: 10px;
+        }
+        .datagrid, .datagrid-container {
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
     <transition name="appShow">
         <div v-show="appShow" class="container-fluid">
-            <h1>{{ vueTitle }}</h1>
+            <div id="datagridContent" class="datagrid"></div>
         </div>
     </transition>
 </div>
 </body>
 <script type="text/javascript" src="/static/plugins/jquery.min.js"></script>
 <script type="text/javascript" src="/static/plugins/zui/js/zui.js"></script>
+<script type="text/javascript" src="/static/plugins/zui/lib/datagrid/zui.datagrid.min.js"></script>
 <script type="text/javascript" src="/static/plugins/web.tool.js"></script>
 <script type="text/javascript" src="/static/plugins/vue.min.js"></script>
 <script type="text/javascript" src="/templatesJs/admin/setting/manager.js"></script>
