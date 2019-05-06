@@ -36,3 +36,9 @@
 .background-color-white {
     background-color: white;
 }
+
+
+/* 消息框圆角 */
+.messager {
+    border-radius: 4px !important;
+}

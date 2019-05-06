@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="158e4214-e39b-4ef8-b3b9-aef359cedda9" name="Default Changelist" comment="" />
+    <list default="true" id="158e4214-e39b-4ef8-b3b9-aef359cedda9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templatesJs/admin/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/templatesJs/admin/css/style.css" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -127,7 +132,7 @@
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="3" />
-          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
@@ -135,16 +140,16 @@
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="6" />
-          <entry key="gitattributes" value="1" />
+          <entry key="css" value="7" />
+          <entry key="gitattributes" value="2" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="49" />
-          <entry key="js" value="40" />
+          <entry key="html" value="51" />
+          <entry key="js" value="42" />
           <entry key="json" value="2" />
           <entry key="md" value="1" />
           <entry key="ts" value="73" />
@@ -152,30 +157,30 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="6" />
-          <entry key="HTML" value="49" />
+          <entry key="CSS" value="7" />
+          <entry key="HTML" value="51" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="40" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="JavaScript" value="42" />
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="TypeScript" value="73" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="114" />
-          <entry key="gitattributes" value="35" />
+          <entry key="css" value="149" />
+          <entry key="gitattributes" value="46" />
           <entry key="gitignore" value="7" />
-          <entry key="html" value="9898" />
-          <entry key="js" value="5463" />
+          <entry key="html" value="9916" />
+          <entry key="js" value="5492" />
           <entry key="ts" value="38786" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="114" />
-          <entry key="HTML" value="9898" />
-          <entry key="JavaScript" value="5463" />
-          <entry key="PLAIN_TEXT" value="42" />
+          <entry key="CSS" value="149" />
+          <entry key="HTML" value="9916" />
+          <entry key="JavaScript" value="5492" />
+          <entry key="PLAIN_TEXT" value="53" />
           <entry key="TypeScript" value="38786" />
         </counts>
       </usages-collector>
@@ -187,17 +192,71 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="318" column="63" lean-forward="true" selection-start-line="318" selection-start-column="63" selection-end-line="318" selection-end-column="63" />
+            <state relative-caret-position="207">
+              <caret line="9" column="67" lean-forward="true" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
               <folding>
                 <element signature="n#style#0;n#span#1;n#div#0;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitattributes">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/plugins/web.tool.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templatesJs/admin/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templatesJs/admin/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/admin/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/admin/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -271,7 +330,6 @@
         <option value="$PROJECT_DIR$/src/apis/index.ts" />
         <option value="$PROJECT_DIR$/src/models/index.ts" />
         <option value="$PROJECT_DIR$/src/views/adminViews.ts" />
-        <option value="$PROJECT_DIR$/.gitattributes" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/src/controller/BaseController.ts" />
@@ -282,19 +340,15 @@
         <option value="$PROJECT_DIR$/public/plugins/zui/zui.public.js" />
         <option value="$PROJECT_DIR$/public/plugins/zui/lib.js" />
         <option value="$PROJECT_DIR$/public/plugins/express.tool.js" />
-        <option value="$PROJECT_DIR$/templates/admin/register.html" />
-        <option value="$PROJECT_DIR$/templates/admin/login.html" />
         <option value="$PROJECT_DIR$/templatesJs/js.template.js" />
         <option value="$PROJECT_DIR$/src/models/Navigation.ts" />
         <option value="$PROJECT_DIR$/templates/html.template.html" />
-        <option value="$PROJECT_DIR$/templatesJs/admin/css/style.css" />
         <option value="$PROJECT_DIR$/src/controller/SettingController.ts" />
         <option value="$PROJECT_DIR$/src/apis/Index.ts" />
         <option value="$PROJECT_DIR$/templates/admin/setting/menu.html" />
         <option value="$PROJECT_DIR$/templates/admin/home/home.html" />
         <option value="$PROJECT_DIR$/templatesJs/admin/home/home.js" />
         <option value="$PROJECT_DIR$/src/common/common.ts" />
-        <option value="$PROJECT_DIR$/public/plugins/web.tool.js" />
         <option value="$PROJECT_DIR$/src/common/TokenMiddleware.ts" />
         <option value="$PROJECT_DIR$/templatesJs/admin/setting/menu.js" />
         <option value="$PROJECT_DIR$/templates/admin/index.html" />
@@ -302,6 +356,11 @@
         <option value="$PROJECT_DIR$/src/views/AdminViews.ts" />
         <option value="$PROJECT_DIR$/templatesJs/admin/setting/manager.js" />
         <option value="$PROJECT_DIR$/templates/admin/setting/manager.html" />
+        <option value="$PROJECT_DIR$/.gitattributes" />
+        <option value="$PROJECT_DIR$/templatesJs/admin/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/admin/login.html" />
+        <option value="$PROJECT_DIR$/templates/admin/register.html" />
+        <option value="$PROJECT_DIR$/public/plugins/web.tool.js" />
       </list>
     </option>
   </component>
@@ -332,13 +391,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="express-admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
@@ -351,10 +425,18 @@
               <item name="templatesJs" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="templatesJs" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -462,11 +544,12 @@
       <workItem from="1557103630248" duration="4198000" />
       <workItem from="1557108402729" duration="1260000" />
       <workItem from="1557123626494" duration="1615000" />
+      <workItem from="1557135692722" duration="1158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201912000" />
+    <option name="totallyTimeSpent" value="203070000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -479,6 +562,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1721" height="1041" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14421365" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -495,7 +579,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32819384" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3270925" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32599118" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -567,13 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -666,29 +743,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/setting/nav-list.html" />
     <entry file="file://$PROJECT_DIR$/templatesJs/admin/setting/nav-list.js" />
-    <entry file="file://$PROJECT_DIR$/templates/admin/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="965">
-          <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/plugins/zui/css/zui-theme.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templatesJs/admin/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/User.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -729,13 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/plugins/web.tool.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="60" column="31" lean-forward="true" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -781,13 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templatesJs/admin/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templatesJs/js.template.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -816,15 +858,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templatesJs/admin/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templatesJs/admin/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="318" column="63" lean-forward="true" selection-start-line="318" selection-start-column="63" selection-end-line="318" selection-end-column="63" />
+        <state relative-caret-position="207">
+          <caret line="9" column="67" lean-forward="true" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
           <folding>
             <element signature="n#style#0;n#span#1;n#div#0;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/plugins/web.tool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
