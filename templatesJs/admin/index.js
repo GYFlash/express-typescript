@@ -66,7 +66,7 @@ const app =  new Vue({
 
             if (window.document.documentElement.clientWidth < windowCriticalValue) {
                 this.showLeftNavBar = false;
-                if (this.tempNavs.length > 3) {
+                if (this.tempNavs.length > 4) {
                     this.closeTemp(0)
                 }
             } else {
@@ -113,7 +113,12 @@ function showApp(vue) {
     document.getElementById('app').style.display = 'block';
     vue.appShow = true;
 }
-
+if (window.screen.width > windowCriticalValue) {
+    app.showLeftNavBar = true;
+} else if (window.screen.width == windowCriticalValue) {
+} else {
+    app.showLeftNavBar = false;
+}
 window.onresize = function () {
     if (window.screen.width > windowCriticalValue) {
         app.showLeftNavBar = true;

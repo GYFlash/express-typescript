@@ -172,9 +172,10 @@
             height: 40px;
             line-height: 40px;
             text-align: center;
-            padding: 0 10px;
+            padding: 0 20px 0 0;
             cursor: pointer;
             position: relative;
+            overflow: hidden;
         }
         .admin-container .header-bar .tempNav:hover, .admin-container .header-bar .active {
             background-color: #f6f6f6;
@@ -199,9 +200,13 @@
         .admin-container .header-bar .tempNav .close {
             height: 40px;
             line-height: 40px;
-            width: 30px;
-            text-align: right;
-            float: right;
+            width: 20px;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
         }
         .admin-container .admin-container-iframe {
             position: absolute;
@@ -282,7 +287,7 @@
                 <!-- 主体内容 -->
                 <div :class="{ 'admin-container': true, 'admin-container-fluid': !showLeftNavBar }">
                     <div class="header-bar">
-                        <a class="icon icon-home tempNav" href="/admin"></a>
+                        <a class="tempNav" href="/admin" style="padding-right: 0;"><i class="icon icon-home"></i></a>
                         <div v-for="(nav, index) in tempNavs" :key="'temp_'+ index" :class="{'tempNav': true, 'active': nav.active}">
                             <span class="top-line"></span>
                             <i @click="changeContent(index)" >{{nav.title}}</i>
