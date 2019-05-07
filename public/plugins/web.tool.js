@@ -8,6 +8,7 @@
         url: {
             adminLogin: { type: 'post', path: '/api/login' },
             adminRegister: { type: 'post', path: '/api/register' },
+            adminGetUsers: { type: 'post', path: '/api/getUsers' },
             adminSetMenu: { type: 'post', path: '/api/set-menu' },
             adminGetMenu: { type: 'get', path: '/api/get-menu' },
             adminDelMenu: { type: 'post', path: '/api/del-menu' }

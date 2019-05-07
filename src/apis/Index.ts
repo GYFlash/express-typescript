@@ -30,9 +30,19 @@ router.post('/login', async (req, res) => {
 
 //// 用户列表查询
 router.post('/getUsers', async (req, res) => {
+    let params = req.body;
     let userController = new UserController();
-    let jsonResponse:JsonResponse = await userController.userGetAll();
-    res.json(jsonResponse);
+    let jsonResponse:JsonResponse = await userController.userGetAll(params);
+    let data:any = jsonResponse;
+    data.result = jsonResponse.status;
+    data.data = jsonResponse.data;
+    data.message = jsonResponse.message;
+    data.pager = {
+        page: 1,
+        recTotal: 100,
+        recPerPage: 10
+    }
+    res.json(data);
 });
 
 //// 设置侧边栏导航

@@ -14,24 +14,35 @@ const app =  new Vue({
     },
     methods: {
         loadData: function () {
+            // $wt._request({
+            //     url: $wt.url.adminGetUsers,
+            //     useToken: true,
+            //     data: {
+            //         type: 1
+            //     },
+            //     success: function (res) {
+            //         console.log(res);
+            //     }
+            // })
             $('#datagridContent').datagrid({
                 dataSource: {
                     cols:[
-                        {name: 'time', label: '时间', width: 132},
-                        {name: 'hero', label: '英雄', width: 134},
-                        {name: 'action', label: '动作', width: 109},
-                        {name: 'target', label: '目标', width: 109},
-                        {name: 'desc', label: '描述', width: 287}
+                        {name: 'id', label: 'id'},
+                        {name: 'avatar', label: '头像'},
+                        {name: 'account', label: '账号'},
+                        {name: 'nickname', label: '昵称'},
+                        {name: '', label: '操作'},
                     ],
-                    array:[
-                        {time: '00:11:12', hero:'幻影刺客', action: '击杀', target: '斧王', desc: '幻影刺客击杀了斧王。'},
-                        {time: '00:13:22', hero:'幻影刺客', action: '购买了', target: '隐刀', desc: '幻影刺客购买了隐刀。'},
-                        {time: '00:19:36', hero:'斧王', action: '购买了', target: '黑皇杖', desc: '斧王购买了黑皇杖。'},
-                        {time: '00:21:43', hero:'力丸', action: '购买了', target: '隐刀', desc: '力丸购买了隐刀。'}
-                    ]
-                },
-                states: {
-                    pager: {page: 1, recPerPage: 20}
+                    remote: function (params) {
+                        return {
+                            url: $wt.url.adminGetUsers.path,
+                            type: $wt.url.adminGetUsers.type,
+                            dataType: 'json',
+                            params: {
+                                type: 1
+                            }
+                        }
+                    }
                 }
             })
         }

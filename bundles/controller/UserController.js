@@ -46,6 +46,7 @@ class UserController extends BaseController_1.BaseController {
                     let _this = this;
                     newUser.account = params.account;
                     newUser.password = common_1.Md5(params.password);
+                    newUser.admin = 0;
                     // 新用户保存到数据库
                     let resUser = yield con.manager.save(newUser);
                     if (resUser) {
@@ -130,12 +131,39 @@ class UserController extends BaseController_1.BaseController {
                 this.jsonResponse.message = '数据库连接失败';
                 return this.jsonResponse;
             }
-            // 查询用户
-            let users = yield User_1.User.find();
-            this.jsonResponse = new common_1.JsonResponseSuccess();
-            this.jsonResponse.message = '查询成功';
-            this.jsonResponse.data = users;
-            return this.jsonResponse;
+            let type = params.type;
+            if (type == '0') {
+                // 查询所有用户
+                let users = yield User_1.User.find();
+                this.jsonResponse = new common_1.JsonResponseSuccess();
+                this.jsonResponse.message = '查询成功';
+                this.jsonResponse.data = users;
+                return this.jsonResponse;
+            }
+            else if (type == '1') {
+                // 查询后台管理员用户
+                let users = yield User_1.User.find({ admin: 1 });
+                this.jsonResponse = new common_1.JsonResponseSuccess();
+                this.jsonResponse.message = '查询成功';
+                this.jsonResponse.data = users;
+                return this.jsonResponse;
+            }
+            else if (type == '2') {
+                // 查询普通用户
+                let users = yield User_1.User.find({ admin: 0 });
+                this.jsonResponse = new common_1.JsonResponseSuccess();
+                this.jsonResponse.message = '查询成功';
+                this.jsonResponse.data = users;
+                return this.jsonResponse;
+            }
+            else {
+                // 查询所有用户
+                let users = yield User_1.User.find();
+                this.jsonResponse = new common_1.JsonResponseSuccess();
+                this.jsonResponse.message = '查询成功';
+                this.jsonResponse.data = users;
+                return this.jsonResponse;
+            }
         });
     }
 }

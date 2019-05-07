@@ -52,6 +52,24 @@ __decorate([
     }),
     __metadata("design:type", Object)
 ], User.prototype, "token", void 0);
+__decorate([
+    typeorm_1.Column('int'),
+    __metadata("design:type", Object)
+], User.prototype, "admin", void 0);
+__decorate([
+    typeorm_1.Column({
+        type: 'text',
+        charset: 'utf8'
+    }),
+    __metadata("design:type", Object)
+], User.prototype, "avatar", void 0);
+__decorate([
+    typeorm_1.Column({
+        type: 'text',
+        charset: 'utf8'
+    }),
+    __metadata("design:type", Object)
+], User.prototype, "nickname", void 0);
 User = __decorate([
     typeorm_1.Entity()
 ], User);

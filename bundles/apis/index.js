@@ -39,9 +39,19 @@ router.post('/login', (req, res) => __awaiter(this, void 0, void 0, function* ()
 }));
 //// 用户列表查询
 router.post('/getUsers', (req, res) => __awaiter(this, void 0, void 0, function* () {
+    let params = req.body;
     let userController = new UserController_1.UserController();
-    let jsonResponse = yield userController.userGetAll();
-    res.json(jsonResponse);
+    let jsonResponse = yield userController.userGetAll(params);
+    let data = jsonResponse;
+    data.result = jsonResponse.status;
+    data.data = jsonResponse.data;
+    data.message = jsonResponse.message;
+    data.pager = {
+        page: 1,
+        recTotal: 100,
+        recPerPage: 10
+    };
+    res.json(data);
 }));
 //// 设置侧边栏导航
 router.post('/set-menu', (req, res) => __awaiter(this, void 0, void 0, function* () {

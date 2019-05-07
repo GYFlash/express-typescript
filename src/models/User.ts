@@ -36,7 +36,22 @@ class User extends BaseEntity {
         type: 'text',
         charset: 'utf8'
     })
-    token:string | undefined
+    token:string | undefined;
+
+    @Column('int')
+    admin:number | undefined;
+
+    @Column({
+        type: 'text',
+        charset: 'utf8'
+    })
+    avatar:string | undefined;
+
+    @Column({
+        type: 'text',
+        charset: 'utf8'
+    })
+    nickname:string | undefined;
 }
 
 export { User }
