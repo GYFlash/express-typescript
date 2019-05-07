@@ -274,6 +274,7 @@
                 <transition name="showLeftNavBar">
                     <nav v-show="showLeftNavBar" class="g-sidebar">
                         <ul>
+                            <li v-show="!navigationItems" style="text-align: center;"><i class="icon icon-spinner-snake icon-2x icon-spin text-blue" style="color: white;"></i></li>
                             <li v-for="(item, index) in navigationItems" :key="'item_'+index" class="g-menu">
                                 <a class="g-title"  href="#">
                                     <span><i :class="item.iconClass"></i><i>{{ item.title }}</i></span><em class="icon icon-chevron-left"></em>

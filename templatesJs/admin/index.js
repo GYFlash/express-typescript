@@ -13,7 +13,7 @@ const app =  new Vue({
         appShow: false,
         vueTitle: 'welcome use vue template!',
         showLeftNavBar: true,
-        navigationItems: [],
+        navigationItems: null,
         tempNavs: [],
         currentNav: {
             routerPath: '/admin/home'
@@ -50,7 +50,6 @@ const app =  new Vue({
                 url: $wt.url.adminGetMenu,
                 useToken: true,
                 success: function (res) {
-                    console.log(res.data);
                     _this.navigationItems = res.data;
                     setClickEvents();
                 }

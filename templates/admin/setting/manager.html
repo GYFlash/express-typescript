@@ -30,6 +30,27 @@
                 <div class="datagrid-container"></div>
                 <div class="pager"></div>
             </div>
+
+            <!-- 编辑用户信息 -->
+            <div class="modal fade" id="edit">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+                            <h4 class="modal-title">编辑用户信息</h4>
+                        </div>
+                        <div class="modal-body">
+                            <br>
+                            <br>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn " @click="cancelEdit">取消</button>
+                            <button type="button" class="btn btn-primary" @click="sureEdit">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </transition>
 </div>
