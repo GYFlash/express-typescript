@@ -4,10 +4,6 @@
     <list default="true" id="158e4214-e39b-4ef8-b3b9-aef359cedda9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/setting/manager.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/setting/manager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/setting/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/setting/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templatesJs/admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/templatesJs/admin/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templatesJs/admin/setting/manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/templatesJs/admin/setting/manager.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -172,7 +168,7 @@
           <entry key="css" value="149" />
           <entry key="gitattributes" value="46" />
           <entry key="gitignore" value="7" />
-          <entry key="html" value="10064" />
+          <entry key="html" value="10105" />
           <entry key="js" value="6760" />
           <entry key="ts" value="39452" />
         </counts>
@@ -180,7 +176,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="149" />
-          <entry key="HTML" value="10064" />
+          <entry key="HTML" value="10105" />
           <entry key="JavaScript" value="6760" />
           <entry key="PLAIN_TEXT" value="53" />
           <entry key="TypeScript" value="39452" />
@@ -198,8 +194,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="277" column="41" lean-forward="true" selection-start-line="277" selection-start-column="41" selection-end-line="277" selection-end-column="41" />
+            <state relative-caret-position="322">
+              <caret line="65" column="56" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
               <folding>
                 <element signature="n#style#0;n#span#1;n#div#0;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -581,12 +577,12 @@
       <workItem from="1557135692722" duration="1223000" />
       <workItem from="1557137112127" duration="13000" />
       <workItem from="1557207573533" duration="3417000" />
-      <workItem from="1557211501925" duration="10372000" />
+      <workItem from="1557211501925" duration="11205000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216937000" />
+    <option name="totallyTimeSpent" value="217770000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -601,14 +597,14 @@
     <frame x="-7" y="-7" width="1721" height="1041" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14421365" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14421365" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.33039647" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32819384" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.44603524" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.44603524" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32929516" />
@@ -616,7 +612,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32819384" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32378855" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32378855" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -942,8 +938,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="277" column="41" lean-forward="true" selection-start-line="277" selection-start-column="41" selection-end-line="277" selection-end-column="41" />
+        <state relative-caret-position="322">
+          <caret line="65" column="56" selection-start-line="65" selection-start-column="56" selection-end-line="65" selection-end-column="56" />
           <folding>
             <element signature="n#style#0;n#span#1;n#div#0;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
