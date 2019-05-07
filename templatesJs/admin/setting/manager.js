@@ -44,7 +44,7 @@ const app =  new Vue({
                         {name: '', label: '操作', valueOperator: {
                                 getter: function (value, cell, dataGrid) {
                                     var index = parseInt(cell.rowIndex) - 1;
-                                    return '<div class="btn-group" style="position: absolute;left: 5px; top: 3px;"><button type="button" class="btn btn-info" onclick="edit('+ index +')">编辑</button></div>'
+                                    return '<div class="btn-group" style="position: absolute;left: 5px; top: 3px;"><button type="button" class="btn btn-primary" onclick="edit('+ index +')">编辑</button></div>'
                                 }
                             }},
                     ],
