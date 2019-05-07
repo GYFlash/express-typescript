@@ -34,13 +34,16 @@ router.post('/getUsers', async (req, res) => {
     let userController = new UserController();
     let jsonResponse:JsonResponse = await userController.userGetAll(params);
     let data:any = jsonResponse;
+    let length = jsonResponse.data.length;
+    let start = (parseInt(params.page) - 1) * parseInt(params.recPerPage);
+    let end = start + parseInt(params.recPerPage);
     data.result = jsonResponse.status;
-    data.data = jsonResponse.data;
+    data.data = jsonResponse.data.slice(start, end);
     data.message = jsonResponse.message;
     data.pager = {
-        page: 1,
-        recTotal: 100,
-        recPerPage: 10
+        page: params.page,
+        recTotal: length,
+        recPerPage: params.recPerPage
     }
     res.json(data);
 });

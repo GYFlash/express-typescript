@@ -45,6 +45,7 @@ class Intercept {
     public static shouldNot(url:string):boolean {
         return url == '/api/register'
             || url == '/api/login'
+            || url == '/api/getUsers'
             || (url.indexOf('/admin') != -1)
     }
 }

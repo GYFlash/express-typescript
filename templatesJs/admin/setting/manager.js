@@ -43,6 +43,9 @@ const app =  new Vue({
                             }
                         }
                     }
+                },
+                states: {
+                    pager: {page: 1, recPerPage: 5}
                 }
             })
         }
