@@ -3,20 +3,61 @@
 // 作者：区区电脑
 // createTime: 2019/4/23
 
-import { BaseController } from "./BaseController";
+import {BaseController} from "./BaseController";
 import {
     JsonResponse,
     JsonResponseError,
+    JsonResponseStatusCode,
     JsonResponseSuccess,
-    Md5, Token
+    Md5,
+    Token,
+    TokenResult
 } from "../common/common";
-import { User } from "../models/User";
-import { Connection } from "typeorm";
+import {User} from "../models/User";
+import {Connection} from "typeorm";
 
 export class UserController extends BaseController{
 
     constructor () {
         super();
+    }
+
+    /**
+     * 校验用户权限
+     * @param token
+     */
+    private async _userCheckAuth(token:string):Promise<JsonResponse> {
+        let result:TokenResult = await Token.check(token);
+        if (result.data) {
+            let id = result.data.id;
+            // 链接数据库
+            let con:Connection = await this._connectionOpen();
+            if (!con) {
+                this.jsonResponse = new JsonResponseError();
+                this.jsonResponse.message = '数据库连接失败';
+                return this.jsonResponse;
+            }
+            // 查询用户是否存在
+            let user:User|undefined = await User.findOne({id: id});
+            if (!user) {
+                this.jsonResponse = new JsonResponseError();
+                this.jsonResponse.message = '用户不存在';
+                return this.jsonResponse;
+            }
+            if (user.admin == 0) {
+                this.jsonResponse = new JsonResponseError();
+                this.jsonResponse.message = '您没有该权限';
+                return this.jsonResponse;
+            } else {
+                this.jsonResponse = new JsonResponseSuccess();
+                this.jsonResponse.message = '该用户权限校验成功';
+                return this.jsonResponse;
+            }
+        } else {
+            this.jsonResponse = new JsonResponseError();
+            this.jsonResponse.message = '无效的token';
+            return this.jsonResponse;
+        }
     }
 
     /**
@@ -154,5 +195,48 @@ export class UserController extends BaseController{
             this.jsonResponse.data = users;
             return this.jsonResponse;
         }
+    }
+
+    /**
+     * 修改用户信息
+     * @param req
+     */
+    public async setUserInfo(req:any):Promise<JsonResponse> {
+        // 链接数据库
+        let con:Connection = await this._connectionOpen();
+        if (!con) {
+            this.jsonResponse = new JsonResponseError();
+            this.jsonResponse.message = '数据库连接失败';
+            return this.jsonResponse;
+        }
+        if (req.body.id == 1) {
+            this.jsonResponse = new JsonResponseError();
+            this.jsonResponse.message = '不允许修改超级管理员的管理权限';
+            return this.jsonResponse;
+        }
+        // 校验用户权限
+        let token = req.headers.token;
+        let userAuth:JsonResponse = await this._userCheckAuth(token);
+        if (userAuth.code != JsonResponseStatusCode.code_000) {
+            return userAuth;
+        }
+        let params = req.body;
+        let user:User|undefined = await User.findOne({id: params.id});
+        if (!user) {
+            this.jsonResponse = new JsonResponseError();
+            this.jsonResponse.message = '用户不存在';
+            return this.jsonResponse;
+        }
+        user.setInfo(params);
+        let result = await User.save(user);
+        if (!result) {
+            this.jsonResponse = new JsonResponseError();
+            this.jsonResponse.message = '修改失败';
+            return this.jsonResponse;
+        }
+        this.jsonResponse = new JsonResponseSuccess();
+        this.jsonResponse.message = '修改成功';
+        this.jsonResponse.data = result;
+        return this.jsonResponse;
     }
 }

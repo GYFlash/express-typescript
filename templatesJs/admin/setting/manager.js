@@ -2,15 +2,18 @@
 // ProjectName: express-admin
 // 作者: 区区电脑
 // CreateTime: 2019/5/6
+var pageNumber = 1;
 const app =  new Vue({
     el: '#app',
     data: {
         appShow: false,
         vueTitle: 'welcome use vue template!',
         list: null,
-        currentItem: null
+        currentItem: null,
+        userId: null
     },
     mounted: function () {
+        this.userId = window.localStorage.getItem('user.id');
         showApp(this);
         this.loadData();
     },
@@ -58,6 +61,7 @@ const app =  new Vue({
                     remoteConverter: function (resPonseData) {
                         if (resPonseData.result == 'success') {
                             _this.list = resPonseData.data;
+                            pageNumber = resPonseData.pager.page
                         }
                         return resPonseData;
                     }
@@ -76,7 +80,6 @@ const app =  new Vue({
             })
         },
         showEdit: function (index) {
-            console.log(this.list[index]);
             this.currentItem = this.list[index];
             $('#edit').modal({position: 100});
         },
@@ -85,8 +88,27 @@ const app =  new Vue({
             this.currentItem = null;
         },
         sureEdit: function () {
-            console.log('确定');
-            $('#edit').modal('hide');
+            var _this = this;
+            var params = this.currentItem;
+            $wt._request({
+                url: $wt.url.adminSetUserInfo,
+                data: params,
+                useToken: true,
+                success: function (res) {
+                    if (res.code == '000') {
+                        $wt._message({
+                            msg: res.message,
+                            type: 'success'
+                        });
+                        // 获取数据表格实例
+                        var dataGrid = $('#datagridContent').data('zui.datagrid');
+                        // 切换并渲染该页面
+                        dataGrid.goToPage(pageNumber);
+                        $('#edit').modal('hide');
+                    }
+                }
+            });
+
         }
     }
 });

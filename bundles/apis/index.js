@@ -56,6 +56,12 @@ router.post('/getUsers', (req, res) => __awaiter(this, void 0, void 0, function*
     };
     res.json(data);
 }));
+//// 修改用户信息
+router.post('/set-user-info', (req, res) => __awaiter(this, void 0, void 0, function* () {
+    let userController = new UserController_1.UserController();
+    let jsonResponse = yield userController.setUserInfo(req);
+    res.json(jsonResponse);
+}));
 //// 设置侧边栏导航
 router.post('/set-menu', (req, res) => __awaiter(this, void 0, void 0, function* () {
     let params = req.body;

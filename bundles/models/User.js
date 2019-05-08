@@ -15,6 +15,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 let User = class User extends typeorm_1.BaseEntity {
+    setInfo(info) {
+        // this.id = info.id;
+        // this.account = info.account;
+        // this.password = info.password;
+        // this.age = info.age;
+        // this.avatar = info.avatar;
+        // this.sign = info.sign;
+        // this.admin = info.admin;
+        for (let key in info) {
+            if (info[key] && key != 'id') {
+                // @ts-ignore
+                this[key] = info[key];
+            }
+        }
+    }
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),

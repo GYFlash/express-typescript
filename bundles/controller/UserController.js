@@ -20,6 +20,47 @@ class UserController extends BaseController_1.BaseController {
         super();
     }
     /**
+     * 校验用户权限
+     * @param token
+     */
+    _userCheckAuth(token) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let result = yield common_1.Token.check(token);
+            if (result.data) {
+                let id = result.data.id;
+                // 链接数据库
+                let con = yield this._connectionOpen();
+                if (!con) {
+                    this.jsonResponse = new common_1.JsonResponseError();
+                    this.jsonResponse.message = '数据库连接失败';
+                    return this.jsonResponse;
+                }
+                // 查询用户是否存在
+                let user = yield User_1.User.findOne({ id: id });
+                if (!user) {
+                    this.jsonResponse = new common_1.JsonResponseError();
+                    this.jsonResponse.message = '用户不存在';
+                    return this.jsonResponse;
+                }
+                if (user.admin == 0) {
+                    this.jsonResponse = new common_1.JsonResponseError();
+                    this.jsonResponse.message = '您没有该权限';
+                    return this.jsonResponse;
+                }
+                else {
+                    this.jsonResponse = new common_1.JsonResponseSuccess();
+                    this.jsonResponse.message = '该用户权限校验成功';
+                    return this.jsonResponse;
+                }
+            }
+            else {
+                this.jsonResponse = new common_1.JsonResponseError();
+                this.jsonResponse.message = '无效的token';
+                return this.jsonResponse;
+            }
+        });
+    }
+    /**
      * 用户注册
      * @param params
      */
@@ -164,6 +205,50 @@ class UserController extends BaseController_1.BaseController {
                 this.jsonResponse.data = users;
                 return this.jsonResponse;
             }
+        });
+    }
+    /**
+     * 修改用户信息
+     * @param req
+     */
+    setUserInfo(req) {
+        return __awaiter(this, void 0, void 0, function* () {
+            // 链接数据库
+            let con = yield this._connectionOpen();
+            if (!con) {
+                this.jsonResponse = new common_1.JsonResponseError();
+                this.jsonResponse.message = '数据库连接失败';
+                return this.jsonResponse;
+            }
+            if (req.body.id == 1) {
+                this.jsonResponse = new common_1.JsonResponseError();
+                this.jsonResponse.message = '不允许修改超级管理员的管理权限';
+                return this.jsonResponse;
+            }
+            // 校验用户权限
+            let token = req.headers.token;
+            let userAuth = yield this._userCheckAuth(token);
+            if (userAuth.code != common_1.JsonResponseStatusCode.code_000) {
+                return userAuth;
+            }
+            let params = req.body;
+            let user = yield User_1.User.findOne({ id: params.id });
+            if (!user) {
+                this.jsonResponse = new common_1.JsonResponseError();
+                this.jsonResponse.message = '用户不存在';
+                return this.jsonResponse;
+            }
+            user.setInfo(params);
+            let result = yield User_1.User.save(user);
+            if (!result) {
+                this.jsonResponse = new common_1.JsonResponseError();
+                this.jsonResponse.message = '修改失败';
+                return this.jsonResponse;
+            }
+            this.jsonResponse = new common_1.JsonResponseSuccess();
+            this.jsonResponse.message = '修改成功';
+            this.jsonResponse.data = result;
+            return this.jsonResponse;
         });
     }
 }

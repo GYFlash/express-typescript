@@ -44,8 +44,15 @@ router.post('/getUsers', async (req, res) => {
         page: params.page,
         recTotal: length,
         recPerPage: params.recPerPage
-    }
+    };
     res.json(data);
+});
+
+//// 修改用户信息
+router.post('/set-user-info', async (req, res) => {
+    let userController:UserController = new UserController();
+    let jsonResponse:JsonResponse = await userController.setUserInfo(req);
+    res.json(jsonResponse);
 });
 
 //// 设置侧边栏导航

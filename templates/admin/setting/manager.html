@@ -20,6 +20,10 @@
         .datagrid, .datagrid-container {
             background-color: white;
         }
+        #edit .edit img {
+            width: 60px;
+            height: 60px;
+        }
     </style>
 </head>
 <body>
@@ -39,10 +43,44 @@
                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
                             <h4 class="modal-title">编辑用户信息</h4>
                         </div>
-                        <div class="modal-body">
+                        <div v-if="currentItem" class="modal-body">
                             <br>
                             <br>
-
+                            <form class="form-horizontal edit">
+                                <div class="form-group">
+                                    <label class="col-sm-2">id：</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" v-model="currentItem.id" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2">头像：</label>
+                                    <div class="col-sm-8"><img :src="currentItem.avatar" :alt="currentItem.nickname"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2">账号：</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" v-model="currentItem.account" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2">昵称：</label>
+                                    <div class="col-sm-8">
+                                        <input v-if="userId != 1" type="text" class="form-control" v-model="currentItem.nickname" readonly>
+                                        <input v-if="userId == 1" type="text" class="form-control" v-model="currentItem.nickname">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2">管理员权限：</label>
+                                    <div class="col-sm-8">
+                                        <!--<input type="text" class="form-control" v-model="currentItem.admin">-->
+                                        <select class="form-control" v-model="currentItem.admin">
+                                            <option value="0">否</option>
+                                            <option value="1">是</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn " @click="cancelEdit">取消</button>

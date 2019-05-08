@@ -52,6 +52,23 @@ class User extends BaseEntity {
         charset: 'utf8'
     })
     nickname:string | undefined;
+
+    public setInfo(info:any) {
+        // this.id = info.id;
+        // this.account = info.account;
+        // this.password = info.password;
+        // this.age = info.age;
+        // this.avatar = info.avatar;
+        // this.sign = info.sign;
+        // this.admin = info.admin;
+
+        for (let key in info) {
+            if (info[key] && key != 'id') {
+                // @ts-ignore
+                this[key] = info[key];
+            }
+        }
+    }
 }
 
 export { User }

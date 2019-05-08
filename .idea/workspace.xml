@@ -2,6 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="158e4214-e39b-4ef8-b3b9-aef359cedda9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bundles/apis/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/apis/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bundles/apis/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/apis/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bundles/controller/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/controller/UserController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bundles/controller/UserController.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/controller/UserController.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bundles/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bundles/models/User.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/bundles/models/User.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plugins/web.tool.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/web.tool.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apis/Index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/Index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/UserController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/setting/manager.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/setting/manager.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templatesJs/admin/setting/manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/templatesJs/admin/setting/manager.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -124,7 +137,7 @@
     <session id="2134707006">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="22" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
@@ -134,10 +147,10 @@
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="2" />
-          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -145,21 +158,21 @@
           <entry key="css" value="7" />
           <entry key="gitattributes" value="2" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="58" />
-          <entry key="js" value="50" />
+          <entry key="html" value="60" />
+          <entry key="js" value="52" />
           <entry key="json" value="2" />
           <entry key="md" value="1" />
-          <entry key="ts" value="80" />
+          <entry key="ts" value="86" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="7" />
-          <entry key="HTML" value="58" />
+          <entry key="HTML" value="60" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="50" />
+          <entry key="JavaScript" value="52" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="TypeScript" value="80" />
+          <entry key="TypeScript" value="86" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -167,23 +180,23 @@
           <entry key="css" value="149" />
           <entry key="gitattributes" value="46" />
           <entry key="gitignore" value="7" />
-          <entry key="html" value="10105" />
-          <entry key="js" value="6761" />
-          <entry key="ts" value="39452" />
+          <entry key="html" value="10828" />
+          <entry key="js" value="7194" />
+          <entry key="ts" value="40535" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="149" />
-          <entry key="HTML" value="10105" />
-          <entry key="JavaScript" value="6761" />
+          <entry key="HTML" value="10828" />
+          <entry key="JavaScript" value="7194" />
           <entry key="PLAIN_TEXT" value="53" />
-          <entry key="TypeScript" value="39452" />
+          <entry key="TypeScript" value="40535" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="TypeScriptServerServiceImpl" value="17" />
+          <entry key="TypeScriptServerServiceImpl" value="18" />
         </counts>
       </usages-collector>
     </session>
@@ -191,44 +204,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
-              <folding>
-                <element signature="n#style#0;n#span#1;n#div#0;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#nav#0;n#transition#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#li#0;n#ul#0;n#nav#0;n#transition#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/admin/setting/menu.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="160" column="64" lean-forward="true" selection-start-line="160" selection-start-column="64" selection-end-line="160" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/admin/setting/manager.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="48" column="90" selection-start-line="48" selection-start-column="82" selection-end-line="48" selection-end-column="90" />
+            <state relative-caret-position="322">
+              <caret line="68" column="57" lean-forward="true" selection-start-line="68" selection-start-column="57" selection-end-line="68" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templatesJs/admin/setting/manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="46" column="159" selection-start-line="46" selection-start-column="159" selection-end-line="46" selection-end-column="159" />
+            <state relative-caret-position="276">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="19" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -236,20 +224,77 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templatesJs/admin/setting/menu.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/admin/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
+            <state relative-caret-position="437">
+              <caret line="76" column="33" lean-forward="true" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templatesJs/admin/index.js">
+        <entry file="file://$PROJECT_DIR$/src/apis/Index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="285">
+              <caret line="53" column="61" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/UserController.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="221" column="9" lean-forward="true" selection-start-line="221" selection-start-column="9" selection-end-line="221" selection-end-column="9" />
+              <folding>
+                <element signature="e#103#151#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/common.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="446">
+              <caret line="102" column="38" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/TokenMiddleware.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="644">
+              <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/User.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="52" column="6" lean-forward="true" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/AdminViews.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/plugins/web.tool.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -341,19 +386,19 @@
         <option value="$PROJECT_DIR$/templatesJs/admin/setting/menu.js" />
         <option value="$PROJECT_DIR$/src/views/AdminViews.ts" />
         <option value="$PROJECT_DIR$/templatesJs/admin/css/style.css" />
-        <option value="$PROJECT_DIR$/templates/admin/login.html" />
         <option value="$PROJECT_DIR$/templates/admin/register.html" />
         <option value="$PROJECT_DIR$/.gitattributes" />
-        <option value="$PROJECT_DIR$/src/controller/UserController.ts" />
-        <option value="$PROJECT_DIR$/public/plugins/web.tool.js" />
-        <option value="$PROJECT_DIR$/src/models/User.ts" />
         <option value="$PROJECT_DIR$/src/common/common.ts" />
-        <option value="$PROJECT_DIR$/src/apis/Index.ts" />
-        <option value="$PROJECT_DIR$/templates/admin/setting/manager.html" />
         <option value="$PROJECT_DIR$/templates/admin/setting/menu.html" />
         <option value="$PROJECT_DIR$/templatesJs/admin/index.js" />
         <option value="$PROJECT_DIR$/templates/admin/index.html" />
+        <option value="$PROJECT_DIR$/public/plugins/web.tool.js" />
+        <option value="$PROJECT_DIR$/src/models/User.ts" />
+        <option value="$PROJECT_DIR$/src/apis/Index.ts" />
+        <option value="$PROJECT_DIR$/src/controller/UserController.ts" />
         <option value="$PROJECT_DIR$/templatesJs/admin/setting/manager.js" />
+        <option value="$PROJECT_DIR$/templates/admin/setting/manager.html" />
+        <option value="$PROJECT_DIR$/templates/admin/login.html" />
       </list>
     </option>
   </component>
@@ -399,12 +444,6 @@
             <path>
               <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="express-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -423,11 +462,23 @@
               <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="express-admin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="express-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -453,13 +504,6 @@
               <item name="express-admin" type="462c0819:PsiDirectoryNode" />
               <item name="templatesJs" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="express-admin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="express-admin" type="462c0819:PsiDirectoryNode" />
-              <item name="templatesJs" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="setting" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -478,6 +522,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\DeveloperTools\WebStorm 2018.2.5\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="typescript-compiler-editor-notification" value="false" />
   </component>
@@ -576,12 +621,13 @@
       <workItem from="1557135692722" duration="1223000" />
       <workItem from="1557137112127" duration="13000" />
       <workItem from="1557207573533" duration="3417000" />
-      <workItem from="1557211501925" duration="11439000" />
+      <workItem from="1557211501925" duration="11493000" />
+      <workItem from="1557276609720" duration="7360000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218004000" />
+    <option name="totallyTimeSpent" value="225418000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -609,9 +655,9 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32929516" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32819384" />
+      <window_info anchor="bottom" id="TypeScript" order="9" weight="0.3278328" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32378855" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32343236" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -785,13 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/AdminViews.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templatesJs/js.template.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -827,24 +866,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/User.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1058">
-          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/Navigation.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
           <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/plugins/web.tool.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -855,13 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/UserController.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2461">
-          <caret line="118" column="17" selection-start-line="118" selection-start-column="17" selection-end-line="118" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -869,59 +887,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/TokenMiddleware.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/common.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apis/Index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="31" column="46" lean-forward="true" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templatesJs/admin/setting/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templatesJs/admin/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/setting/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="160" column="64" lean-forward="true" selection-start-line="160" selection-start-column="64" selection-end-line="160" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+        <state relative-caret-position="1380">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#span#1;n#div#0;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#nav#0;n#div#0;n#transition#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -932,20 +901,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/setting/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3657">
+          <caret line="160" column="64" selection-start-line="160" selection-start-column="64" selection-end-line="160" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templatesJs/admin/setting/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1656">
+          <caret line="75" column="45" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templatesJs/admin/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/AdminViews.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/plugins/web.tool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apis/Index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="53" column="61" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/TokenMiddleware.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/common.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="102" column="38" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/User.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="52" column="6" lean-forward="true" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/UserController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="221" column="9" lean-forward="true" selection-start-line="221" selection-start-column="9" selection-end-line="221" selection-end-column="9" />
+          <folding>
+            <element signature="e#103#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/setting/manager.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="48" column="90" selection-start-line="48" selection-start-column="82" selection-end-line="48" selection-end-column="90" />
+        <state relative-caret-position="322">
+          <caret line="68" column="57" lean-forward="true" selection-start-line="68" selection-start-column="57" selection-end-line="68" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templatesJs/admin/setting/manager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="46" column="159" selection-start-line="46" selection-start-column="159" selection-end-line="46" selection-end-column="159" />
+        <state relative-caret-position="276">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="19" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="76" column="33" lean-forward="true" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
         </state>
       </provider>
     </entry>
