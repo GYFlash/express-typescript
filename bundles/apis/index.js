@@ -18,10 +18,16 @@ var __importStar = (this && this.__importStar) || function (mod) {
     result["default"] = mod;
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = __importStar(require("express"));
+const common_1 = require("../common/common");
 const UserController_1 = require("../controller/UserController");
 const SettingController_1 = require("../controller/SettingController");
+const multer_1 = __importDefault(require("multer"));
+let upload = multer_1.default({ dest: 'upload_tmp/' });
 let router = express.Router();
 //// 用户注册
 router.post('/register', (req, res) => __awaiter(this, void 0, void 0, function* () {
@@ -93,6 +99,14 @@ router.post('/del-menu', function (req, res) {
         let params = req.body;
         let settingController = new SettingController_1.SettingController();
         let jsonResponse = yield settingController.deleteNavigation(params);
+        res.json(jsonResponse);
+    });
+});
+//// 文件上传
+router.post('/file-upload', upload.any(), function (req, res) {
+    return __awaiter(this, void 0, void 0, function* () {
+        // @ts-ignore
+        let jsonResponse = yield common_1.FileManager.save(req.files[0]);
         res.json(jsonResponse);
     });
 });

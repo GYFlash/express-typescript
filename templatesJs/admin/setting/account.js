@@ -28,11 +28,29 @@ const app =  new Vue({
                 }
             })
         },
+        avatarDidClick: function () {
+            var _this = this;
+            $wt._fileUpload(function (res) {
+                console.log(res);
+                _this.myInfo.avatar = res.data;
+            });
+        },
         editSure: function () {
+            var params = {
+                avatar: this.myInfo.avatar,
+                nickname: this.myInfo.nickname
+            };
             $wt._request({
-                url: $wt.url.adminGetMyInfo,
+                url: $wt.url.adminSetMyInfo,
                 useToken: true,
+                data: params,
                 success: function (res) {
+                    if (res.code == '000') {
+                        $wt._message({
+                            msg: res.message,
+                            type: 'success'
+                        })
+                    }
                 }
             })
         }

@@ -5,6 +5,7 @@
 
 import Jwt from 'jsonwebtoken';
 import crypto from 'crypto';
+import fs from 'fs'
 
 //// 枚举 key
 enum ExpressKey {
@@ -137,6 +138,60 @@ let Md5 = function (message:string):string {
     return md5.update(message).digest('hex');
 };
 
+//// 文件管理
+class FileManager {
+    // 根路径
+    public static rootPath:string = './public/';
+    // 获取当前时间
+    public static currentDate() {
+        let date = new Date();
+        return date.toLocaleDateString();
+    }
+
+    /**
+     * 创建文件夹
+     * @param path
+     */
+    public static async newFolder(path:string):Promise<boolean> {
+        let result = await fs.existsSync(path);
+        if (result) {
+            return true;
+        } else {
+            await fs.mkdirSync(path);
+            return true;
+        }
+    }
+
+    /**
+     * 文件保存
+     * @param file
+     */
+    public static async save(file:any):Promise<JsonResponse> {
+        let jsonResponse:JsonResponse;
+        let readResult = await fs.readFileSync(file.path);
+        if (!readResult) {
+            jsonResponse = new JsonResponseError();
+            jsonResponse.message = '文件读取失败';
+            return jsonResponse;
+        }
+        let currentDate = FileManager.currentDate();
+        let timeValue = new Date().getTime();
+        let fileName = timeValue + '.' + file.originalname;
+        let filePath = 'upload/' + currentDate + '/';
+        let res = await FileManager.newFolder(FileManager.rootPath + filePath);
+        if (!res) {
+            jsonResponse = new JsonResponseError();
+            jsonResponse.message = '文件夹创建失败';
+            return jsonResponse;
+        }
+        await fs.writeFileSync(FileManager.rootPath + filePath + fileName, readResult);
+        jsonResponse = new JsonResponseSuccess();
+        jsonResponse.message = '上传成功';
+        jsonResponse.data = '/static/' + filePath + fileName;
+        return jsonResponse;
+    }
+}
+
 export {
     ExpressKey,
     TokenResult,
@@ -147,5 +202,6 @@ export {
     JsonResponseError,
     JsonResponseStatus,
     JsonResponseStatusCode,
-    Md5
+    Md5,
+    FileManager
 }
