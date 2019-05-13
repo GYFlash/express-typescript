@@ -48,6 +48,13 @@ router.post('/getUsers', async (req, res) => {
     res.json(data);
 });
 
+//// 获取登录用户信息
+router.post('/get-my-info', async (req, res) => {
+    let userController:UserController = new UserController();
+    let jsonResponse:JsonResponse = await userController.getMyInfo(req);
+    res.json(jsonResponse);
+});
+
 //// 修改用户信息
 router.post('/set-user-info', async (req, res) => {
     let userController:UserController = new UserController();

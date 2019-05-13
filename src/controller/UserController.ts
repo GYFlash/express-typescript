@@ -239,4 +239,37 @@ export class UserController extends BaseController{
         this.jsonResponse.data = result;
         return this.jsonResponse;
     }
+
+    /**
+     * 获取个人信息
+     * @param req
+     */
+    public async getMyInfo(req:any):Promise<JsonResponse> {
+        let token = req.headers.token;
+        let result:TokenResult = await Token.check(token);
+        if (result.data) {
+            let id = result.data.id;
+            // 链接数据库
+            let con:Connection = await this._connectionOpen();
+            if (!con) {
+                this.jsonResponse = new JsonResponseError();
+                this.jsonResponse.message = '数据库连接失败';
+                return this.jsonResponse;
+            }
+            let user:User|undefined = await User.findOne({id: id});
+            if (!user) {
+                this.jsonResponse = new JsonResponseError();
+                this.jsonResponse.message = '用户不存在';
+                return this.jsonResponse;
+            }
+            this.jsonResponse = new JsonResponseSuccess();
+            this.jsonResponse.message = '查询成功';
+            this.jsonResponse.data = user;
+            return this.jsonResponse;
+        } else {
+            this.jsonResponse = new JsonResponseError();
+            this.jsonResponse.message = '无效的token';
+            return this.jsonResponse;
+        }
+    }
 }

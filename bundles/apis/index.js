@@ -56,6 +56,12 @@ router.post('/getUsers', (req, res) => __awaiter(this, void 0, void 0, function*
     };
     res.json(data);
 }));
+//// 获取登录用户信息
+router.post('/get-my-info', (req, res) => __awaiter(this, void 0, void 0, function* () {
+    let userController = new UserController_1.UserController();
+    let jsonResponse = yield userController.getMyInfo(req);
+    res.json(jsonResponse);
+}));
 //// 修改用户信息
 router.post('/set-user-info', (req, res) => __awaiter(this, void 0, void 0, function* () {
     let userController = new UserController_1.UserController();

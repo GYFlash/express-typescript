@@ -17,11 +17,16 @@ const app =  new Vue({
         tempNavs: [],
         currentNav: {
             routerPath: '/admin/home'
+        },
+        myInfo: {
+            nickname: '',
+            avatar: ''
         }
     },
     mounted: function () {
         showApp(this);
         this.loadNavigation();
+        this.loadMyInfo();
     },
     methods: {
         homeClick: function () {
@@ -52,6 +57,16 @@ const app =  new Vue({
                 success: function (res) {
                     _this.navigationItems = res.data;
                     setClickEvents();
+                }
+            })
+        },
+        loadMyInfo: function () {
+            var _this = this;
+            $wt._request({
+                url: $wt.url.adminGetMyInfo,
+                useToken: true,
+                success: function (res) {
+                    _this.myInfo = res.data;
                 }
             })
         },
