@@ -1,6 +1,6 @@
 .DS_Store
 node_modules/
-/bundles/
+bundles/
 upload_tmp/
 npm-debug.log*
 yarn-debug.log*
