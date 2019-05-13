@@ -61,6 +61,39 @@ export class UserController extends BaseController{
     }
 
     /**
+     * 获取登录用户
+     * @param token
+     */
+    public async getLoginUser(token:string):Promise<JsonResponse> {
+        let result:TokenResult = await Token.check(token);
+        if (result.data) {
+            let id = result.data.id;
+            // 链接数据库
+            let con:Connection = await this._connectionOpen();
+            if (!con) {
+                this.jsonResponse = new JsonResponseError();
+                this.jsonResponse.message = '数据库连接失败';
+                return this.jsonResponse;
+            }
+            // 查询用户是否存在
+            let user:User|undefined = await User.findOne({id: id});
+            if (!user) {
+                this.jsonResponse = new JsonResponseError();
+                this.jsonResponse.message = '用户不存在';
+                return this.jsonResponse;
+            }
+            this.jsonResponse = new JsonResponseSuccess();
+            this.jsonResponse.message = '登录用户查询成功';
+            this.jsonResponse.data = user;
+            return this.jsonResponse;
+        } else {
+            this.jsonResponse = new JsonResponseError();
+            this.jsonResponse.message = '无效的token';
+            return this.jsonResponse;
+        }
+    }
+
+    /**
      * 用户注册
      * @param params
      */
@@ -198,10 +231,10 @@ export class UserController extends BaseController{
     }
 
     /**
-     * 修改用户信息
+     * 修改用户管理员信息
      * @param req
      */
-    public async setUserInfo(req:any):Promise<JsonResponse> {
+    public async setUserManager(req:any):Promise<JsonResponse> {
         // 链接数据库
         let con:Connection = await this._connectionOpen();
         if (!con) {
@@ -227,7 +260,7 @@ export class UserController extends BaseController{
             this.jsonResponse.message = '用户不存在';
             return this.jsonResponse;
         }
-        user.setInfo(params);
+        user.admin = params.admin;
         let result = await User.save(user);
         if (!result) {
             this.jsonResponse = new JsonResponseError();
@@ -239,6 +272,7 @@ export class UserController extends BaseController{
         this.jsonResponse.data = result;
         return this.jsonResponse;
     }
+
 
     /**
      * 获取个人信息
@@ -271,5 +305,40 @@ export class UserController extends BaseController{
             this.jsonResponse.message = '无效的token';
             return this.jsonResponse;
         }
+    }
+    /**
+     * 修改个人信息
+     * @param req
+     */
+    public async setMyInfo(req:any):Promise<JsonResponse> {
+        // 链接数据库
+        let con:Connection = await this._connectionOpen();
+        if (!con) {
+            this.jsonResponse = new JsonResponseError();
+            this.jsonResponse.message = '数据库连接失败';
+            return this.jsonResponse;
+        }
+        // 校验用户权限
+        let token = req.headers.token;
+        let params = req.body;
+        let res:JsonResponse = await this.getLoginUser(token);
+        if (!res.data) {
+            this.jsonResponse = new JsonResponseError();
+            this.jsonResponse.message = '用户不存在';
+            return this.jsonResponse;
+        }
+        let user:User = res.data;
+        user.nickname = params.nickname;
+        user.avatar = params.avatar;
+        let result = await User.save(user);
+        if (!result) {
+            this.jsonResponse = new JsonResponseError();
+            this.jsonResponse.message = '修改失败';
+            return this.jsonResponse;
+        }
+        this.jsonResponse = new JsonResponseSuccess();
+        this.jsonResponse.message = '修改成功';
+        this.jsonResponse.data = result;
+        return this.jsonResponse;
     }
 }

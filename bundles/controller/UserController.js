@@ -61,6 +61,41 @@ class UserController extends BaseController_1.BaseController {
         });
     }
     /**
+     * 获取登录用户
+     * @param token
+     */
+    getLoginUser(token) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let result = yield common_1.Token.check(token);
+            if (result.data) {
+                let id = result.data.id;
+                // 链接数据库
+                let con = yield this._connectionOpen();
+                if (!con) {
+                    this.jsonResponse = new common_1.JsonResponseError();
+                    this.jsonResponse.message = '数据库连接失败';
+                    return this.jsonResponse;
+                }
+                // 查询用户是否存在
+                let user = yield User_1.User.findOne({ id: id });
+                if (!user) {
+                    this.jsonResponse = new common_1.JsonResponseError();
+                    this.jsonResponse.message = '用户不存在';
+                    return this.jsonResponse;
+                }
+                this.jsonResponse = new common_1.JsonResponseSuccess();
+                this.jsonResponse.message = '登录用户查询成功';
+                this.jsonResponse.data = user;
+                return this.jsonResponse;
+            }
+            else {
+                this.jsonResponse = new common_1.JsonResponseError();
+                this.jsonResponse.message = '无效的token';
+                return this.jsonResponse;
+            }
+        });
+    }
+    /**
      * 用户注册
      * @param params
      */
@@ -208,10 +243,10 @@ class UserController extends BaseController_1.BaseController {
         });
     }
     /**
-     * 修改用户信息
+     * 修改用户管理员信息
      * @param req
      */
-    setUserInfo(req) {
+    setUserManager(req) {
         return __awaiter(this, void 0, void 0, function* () {
             // 链接数据库
             let con = yield this._connectionOpen();
@@ -238,7 +273,7 @@ class UserController extends BaseController_1.BaseController {
                 this.jsonResponse.message = '用户不存在';
                 return this.jsonResponse;
             }
-            user.setInfo(params);
+            user.admin = params.admin;
             let result = yield User_1.User.save(user);
             if (!result) {
                 this.jsonResponse = new common_1.JsonResponseError();
@@ -284,6 +319,43 @@ class UserController extends BaseController_1.BaseController {
                 this.jsonResponse.message = '无效的token';
                 return this.jsonResponse;
             }
+        });
+    }
+    /**
+     * 修改个人信息
+     * @param req
+     */
+    setMyInfo(req) {
+        return __awaiter(this, void 0, void 0, function* () {
+            // 链接数据库
+            let con = yield this._connectionOpen();
+            if (!con) {
+                this.jsonResponse = new common_1.JsonResponseError();
+                this.jsonResponse.message = '数据库连接失败';
+                return this.jsonResponse;
+            }
+            // 校验用户权限
+            let token = req.headers.token;
+            let params = req.body;
+            let res = yield this.getLoginUser(token);
+            if (!res.data) {
+                this.jsonResponse = new common_1.JsonResponseError();
+                this.jsonResponse.message = '用户不存在';
+                return this.jsonResponse;
+            }
+            let user = res.data;
+            user.nickname = params.nickname;
+            user.avatar = params.avatar;
+            let result = yield User_1.User.save(user);
+            if (!result) {
+                this.jsonResponse = new common_1.JsonResponseError();
+                this.jsonResponse.message = '修改失败';
+                return this.jsonResponse;
+            }
+            this.jsonResponse = new common_1.JsonResponseSuccess();
+            this.jsonResponse.message = '修改成功';
+            this.jsonResponse.data = result;
+            return this.jsonResponse;
         });
     }
 }

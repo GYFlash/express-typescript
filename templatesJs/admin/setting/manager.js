@@ -89,9 +89,12 @@ const app =  new Vue({
         },
         sureEdit: function () {
             var _this = this;
-            var params = this.currentItem;
+            var params = {
+                id: this.currentItem.id,
+                admin: this.currentItem.admin
+            };
             $wt._request({
-                url: $wt.url.adminSetUserInfo,
+                url: $wt.url.adminSetUserManager,
                 data: params,
                 useToken: true,
                 success: function (res) {

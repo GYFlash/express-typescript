@@ -62,10 +62,16 @@ router.post('/get-my-info', (req, res) => __awaiter(this, void 0, void 0, functi
     let jsonResponse = yield userController.getMyInfo(req);
     res.json(jsonResponse);
 }));
-//// 修改用户信息
-router.post('/set-user-info', (req, res) => __awaiter(this, void 0, void 0, function* () {
+//// 设置登录用户信息
+router.post('/set-my-info', (req, res) => __awaiter(this, void 0, void 0, function* () {
     let userController = new UserController_1.UserController();
-    let jsonResponse = yield userController.setUserInfo(req);
+    let jsonResponse = yield userController.setMyInfo(req);
+    res.json(jsonResponse);
+}));
+//// 修改管理员权限
+router.post('/set-user-manager', (req, res) => __awaiter(this, void 0, void 0, function* () {
+    let userController = new UserController_1.UserController();
+    let jsonResponse = yield userController.setUserManager(req);
     res.json(jsonResponse);
 }));
 //// 设置侧边栏导航

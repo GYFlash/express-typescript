@@ -55,10 +55,17 @@ router.post('/get-my-info', async (req, res) => {
     res.json(jsonResponse);
 });
 
-//// 修改用户信息
-router.post('/set-user-info', async (req, res) => {
+//// 设置登录用户信息
+router.post('/set-my-info', async (req, res) => {
     let userController:UserController = new UserController();
-    let jsonResponse:JsonResponse = await userController.setUserInfo(req);
+    let jsonResponse:JsonResponse = await userController.setMyInfo(req);
+    res.json(jsonResponse);
+});
+
+//// 修改管理员权限
+router.post('/set-user-manager', async (req, res) => {
+    let userController:UserController = new UserController();
+    let jsonResponse:JsonResponse = await userController.setUserManager(req);
     res.json(jsonResponse);
 });
 

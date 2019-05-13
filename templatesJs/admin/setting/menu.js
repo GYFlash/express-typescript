@@ -91,7 +91,8 @@ const app =  new Vue({
                 useToken: true,
                 success: function (res) {
                     $wt._message({
-                        msg: res.message
+                        msg: res.message,
+                        type: 'success'
                     })
                 }
             })
