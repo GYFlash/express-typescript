@@ -9,6 +9,8 @@ import {
     createConnection,
     getConnection,
 } from "typeorm";
+import {User} from "./User";
+import {Navigation} from "./Navigation";
 
 ///// 开启默认链接
 let connection:any = async function () {
@@ -26,7 +28,10 @@ let connection:any = async function () {
                     entityPrefix: 'express_',
                     database: 'test',
                     charset: "utf8",
-                    entities: [__dirname + '/*{.js,.ts}'],
+                    entities: [
+                        User,
+                        Navigation
+                    ],
                     extra: {
                         connectionLimit:  10, // 连接池最大连接数量, 查阅资料 建议是  core number  * 2 + n
                     },
