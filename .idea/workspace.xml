@@ -107,7 +107,7 @@
         <counts>
           <entry key="css" value="2" />
           <entry key="gif" value="1" />
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
           <entry key="html" value="10" />
           <entry key="jpg" value="1" />
           <entry key="js" value="10" />
@@ -123,7 +123,7 @@
           <entry key="Image" value="2" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="11" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="TypeScript" value="7" />
         </counts>
       </usages-collector>
@@ -196,7 +196,17 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -455,12 +465,12 @@
       <workItem from="1557296606125" duration="1277000" />
       <workItem from="1557457980166" duration="6766000" />
       <workItem from="1557709618296" duration="16710000" />
-      <workItem from="1557734842834" duration="806000" />
+      <workItem from="1557734842834" duration="1114000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252462000" />
+    <option name="totallyTimeSpent" value="252770000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -824,8 +834,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        <state relative-caret-position="207">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
         </state>
       </provider>
     </entry>
