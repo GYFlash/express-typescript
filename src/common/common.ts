@@ -47,6 +47,8 @@ class Intercept {
         return url == '/api/register'
             || url == '/api/login'
             || url == '/api/getUsers'
+            || url == '/'
+            || url == '/ff-ui'
             || (url.indexOf('/admin') != -1)
     }
 }

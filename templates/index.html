@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="/images/icons/favicon.ico"/>
     <link rel="bookmark" href="/images/icons/favicon.ico"/>
     <script type="text/javascript" src="/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="/plugins/ffui/ffui.js"></script>
 </head>
 <body>
 <h1><%= title %></h1>
@@ -23,8 +24,14 @@
 <!--<button onclick="add()">添加用户</button>-->
 <!--<div class="list">-->
 <!--</div>-->
+<button onclick="showAlert('success')">成功</button>
+<button onclick="showAlert('error')">失败</button>
+<button onclick="showAlert('warning')">警告</button>
 <script>
-    load()
+    function showAlert (type) {
+
+    }
+    // load()
 
     async function load () {
         console.log(loadGet())
@@ -69,14 +76,6 @@
                 }
             }
         })
-    }
-    function showList(users) {
-        var html = '';
-        for (var i = 0; i < users.length; i++) {
-            var user = users[i];
-            html += '<p><span>姓名: '+ user.name +'</span> -- <span>年龄: '+ user.age +'</span> -- <span>签名：'+ user.sign +'</span></p>'
-        }
-        $('.list').html(html);
     }
 </script>
 </body>

@@ -14,4 +14,10 @@ router.get('/', (req, res, next) => {
     })
 });
 
+router.get('/ff-ui', (req, res, next) => {
+    res.render('ff-ui', {
+        title: 'Express&Typescript'
+    })
+});
+
 module.exports = router;

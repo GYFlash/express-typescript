@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title><%= title %></title>
+  <link rel="shortcut icon" href="/static/images/icons/favicon.ico"/>
+  <link rel="bookmark" href="/static/images/icons/favicon.ico"/>
+  <link rel="stylesheet" href="/static/plugins/ff-ui/ff-ui.css">
+</head>
+<body>
+<button onclick="showAlert('success', 'top')">成功</button>
+<button onclick="showAlert('error', 'center')">失败</button>
+<button onclick="showAlert('warning', 'bottom')">警告</button>
+<button onclick="showAlert('normal', 'bottom')">普通</button>
+</body>
+<script type="text/javascript" src="/static/plugins/ff-ui/ff-ui.js"></script>
+<script>
+    function showAlert (type, position) {
+        $FFUI.alert({
+            type: type,
+            // position: position
+        })
+    }
+</script>
+</html>
