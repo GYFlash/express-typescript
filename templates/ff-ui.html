@@ -9,10 +9,11 @@
   <link rel="stylesheet" href="/static/plugins/ff-ui/ff-ui.css">
 </head>
 <body>
-<div class="ff-button ff-button-success" onclick="showAlert('success', 'top')">成功</div>
+<br><br><br><br>
+<div class="ff-button ff-button-success" onclick="showAlert('success', 'center')">成功</div>
 <div class="ff-button ff-button-error" onclick="showAlert('error', 'center')">失败</div>
 <div class="ff-button ff-button-warning" onclick="showAlert('warning', 'bottom')">警告</div>
-<div class="ff-button ff-button-primary" onclick="showAlert('normal', 'bottom')">普通</div>
+<div class="ff-button ff-button-primary" onclick="showAlert('normal', 'top')">普通</div>
 <div class="ff-button" onclick="showConfirm()">普通</div>
 </body>
 <script type="text/javascript" src="/static/plugins/ff-ui/ff-ui.js"></script>
@@ -20,11 +21,13 @@
     function showAlert (type, position) {
         $FFUI.alert({
             type: type,
-            // position: position
+            position: position
         })
     }
     function showConfirm() {
         $FFUI.confirm({
+            title: '提示',
+            message: '退出登录',
             cover: true,
             callback: function (r) {
                 console.log(r);

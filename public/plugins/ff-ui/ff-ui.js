@@ -104,7 +104,7 @@
         coverView.style.justifyContent = 'center';
         coverView.style.alignItems = 'center';
         coverView.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-        coverView.style.transition = 'all .5s';
+        coverView.style.transition = 'all .3s';
 
         // content
         let contentView = document.createElement('div');
@@ -118,7 +118,7 @@
         contentView.style.marginTop = '-200px';
         contentView.style.boxShadow = '0 0 5px 0 rgba(0, 0, 0, .3)';
         contentView.style.transition = 'all .3s';
-        contentView.style.transform = 'scale(.5)';
+        contentView.style.transform = 'scale(0)';
         // title
         let titleView = document.createElement('span');
         titleView.style.lineHeight = '40px';
@@ -173,7 +173,7 @@
             contentView.style.transform = 'scale(1.0)';
             clearTimeout(showTimeout);
             showTimeout = null;
-        }, 0);
+        }, 1);
         function hide() {
             coverView.style.backgroundColor = 'rgba(0, 0, 0, 0)';
             contentView.style.transform = 'scale(.5)';
